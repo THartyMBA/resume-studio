@@ -1,0 +1,77 @@
+{
+  "version": "2",
+  "flowTitle": "Stripe Payment Checkout",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Input for name"
+          },
+          "plan": {
+            "type": "string",
+            "description": "Input for plan"
+          },
+          "email": {
+            "type": "string",
+            "description": "Input for email"
+          },
+          "price_id": {
+            "type": "string",
+            "description": "Input for price_id"
+          },
+          "user_sub": {
+            "type": "string",
+            "description": "Input for user_sub"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "05c70a3b-83ef-414f-9a24-a33c0e647488",
+      "valid": false,
+      "displayName": "Create Payment Checkout",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-piece-stripe",
+        "pieceVersion": "1.0.0",
+        "actionName": "createCheckoutSession",
+        "input": {
+          "mode": "payment",
+          "cancel_url": "https://resume-studio-3499.taskade.app?payment=cancelled",
+          "line_items": "[{\"price\":\"{{ trigger.body.price_id }}\",\"quantity\":1}]",
+          "success_url": "https://resume-studio-3499.taskade.app?payment=success&plan={{ trigger.body.plan }}",
+          "customer_email": "{{ trigger.body.email }}",
+          "client_reference_id": "{{ trigger.body.user_sub }}"
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "checkout_url": "{{ 05c70a3b-83ef-414f-9a24-a33c0e647488[\"url\"] }}"
+            },
+            {
+              "session_id": "{{ 05c70a3b-83ef-414f-9a24-a33c0e647488[\"id\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

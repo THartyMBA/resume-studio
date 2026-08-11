@@ -1,0 +1,586 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "504eddb9-121c-4948-b427-76aa2ccb9a26",
+        "text": {
+          "ops": [
+            {
+              "insert": "ResumeForge Build Log"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "52127bf3-0796-4292-991b-8b4e0f90415f",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Resume Profiles project: mVohTn4QhERF3ctz (table view, custom fields: @tgRol, @indst, @rStat, @expLv, @email, @phone, @loctn, @crtAt)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "257c9e2e-d7ba-4fb3-a611-2fe46170e5af",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Resume Writing Guide project: 1Zb47wXNsocRKzXw (list view, reference knowledge)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "5a543473-27a7-4f24-a56f-5bbfef1e62ab",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Resume Coach Agent: 01KQWJVF6W61MW1M8BDHCSKHTN (public, knowledge: both projects)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "58ca6d2c-1a8b-4815-bcbc-26075f502bbe",
+            "text": {
+              "ops": [
+                {
+                  "insert": "App: ResumeForge - landing hero, chat panel with agent SDK v2, resume editor, resume preview with 4 templates + PDF export",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "a1b2c3d4-e5f6-7890-abcd-ef0123456701",
+            "text": {
+              "ops": [
+                {
+                  "insert": "27 resume templates across 7 categories (professional, two-column, creative, corporate, tech, academic, elegant) with font/size/color controls",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "a1b2c3d4-e5f6-7890-abcd-ef0123456702",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Cover Letter Generator: workflow 01KQWM5F3E0HMV2GYSZNYB0W6Q (webhook, AI generate + JSON output)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "a1b2c3d4-e5f6-7890-abcd-ef0123456703",
+            "text": {
+              "ops": [
+                {
+                  "insert": "ATS Score Checker: workflow 01KQWNGR0CHHCMJ0EY4PZSK801 (webhook, AI categorize with json_schema output)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "cc38f9be-fe05-4018-9337-06414e3d0033",
+            "text": {
+              "ops": [
+                {
+                  "insert": "LinkedIn Optimizer: workflow 01KQWNXCNQ9S7E641NVFYQHFZ1 (webhook, AI categorize json_schema → headlines, about, experience, skills, tips)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "aaf8bf0e-bf5e-4b16-982a-0baf0781ca48",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Interview Prep: workflow 01KQWPPE8TRC4HH5TDWRKM8B0Z (webhook, AI categorize json_schema → 10 questions with STAR answers, key points, mistakes, follow-ups, prep tips, readiness assessment)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "4386038f-8970-4b37-bfef-19099f6f2d71",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Version Manager: save/load/rename/delete/duplicate resume versions with target role tagging, in-header dropdown via GitBranch icon, auto-save active version",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "16a46e1d-16f0-4773-aff7-d5083fd5e129",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Salary Negotiation Prep: workflow 01KQWQQTX94ZXSTHJNAM17G97A (web search + AI), salary-prep-page.tsx, store state for salary fields, new 'Salary' tab in App.tsx nav",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "274ac708-0125-4f6e-8d5e-82091d58b847",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Resume Comparison View: resume-diff.ts (diff engine), compare-page.tsx (2-4 version selector, diff view with colored status badges, side-by-side preview mode, skills grid, unchanged toggle), new 'Compare' tab in App.tsx nav",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "0279d895-718e-40aa-8dbe-e184635714af",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Job Application Tracker: project sPAc6zE9YgJqj93h (board view, custom fields: Company, Role, Stage, Salary, URL, Notes, Date, Contact, Priority), job-tracker-store.ts (Zustand + API CRUD), job-tracker-page.tsx (Kanban DnD via @hello-pangea/dnd), job-form-modal.tsx, new 'Tracker' tab",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "47ad0f06-dd04-439b-a65d-9667bad6fd8e",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Skills Gap Analyzer: workflow 01KT54Z1WCMA19BEW7DFCQBRK7 (webhook, AI categorize json_schema → matched/missing/transferable/highlight/resumeChanges/assessment), skills-gap-page.tsx (split panel: JD input + rich results with score ring, collapsible sections, confidence bars, priority badges, resume change diffs), store state (skillsGapJobDescription/Result/Analyzing), new 'Skills Gap' tab",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "1f541187-ec23-4f62-9e7f-7e2efcde1b5b",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Tracker Analytics: tracker-analytics.tsx (Recharts: donut PieChart for stage distribution, BarChart for priority breakdown, AreaChart for application timeline, animated funnel bars with conversion rates, stat cards, rejection list), Board/Analytics toggle in tracker header via LayoutGrid/BarChart3 segmented control",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "7833174a-6a71-4d95-9533-92aefe3d55ac",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Authentication: GenesisAuth (OIDC) wrapped in main.tsx, App.tsx gated behind auth.isAuthenticated, landing CTA triggers signinRedirect(), user avatar dropdown in header with name/email/sign-out, loading spinner during auth init, removed old started/setStarted flow",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "755915c9-dc14-437e-a45c-a472afa7be93",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Per-User Data Isolation: auth-user-store.ts (Zustand store + getCurrentUserId imperative getter), auth-bridge.tsx (syncs OIDC sub → auth store, hydrates/clears on user change), resume-store.ts (hydrateForUser/clearForSignOut/persistForUser + debounced auto-persist subscriber keyed by userId to localStorage), job-tracker-store.ts (filters fetchJobs by @usrId field, tags addJob with userId), @usrId custom field added to Job Tracker project (hidden)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "65682257-03ec-41a5-a81b-5e831b480514",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Dashboard Home Page: Added 'dashboard' to activeView type, default landing view after auth, dashboard-page.tsx with greeting/stats/pipeline/quick-actions/versions/activity-timeline, logo click navigates to dashboard, stat cards link to relevant views",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "84cecf9d-dd48-4179-a089-adda70614794",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Nav Notification Badges: hooks/use-nav-badges.ts (computed badge data per tab — count/dot/alert variants), components/nav-badge.tsx (3-variant pill/dot/alert renderer), integrated into desktop + mobile nav in App.tsx, badges for Editor/CoverLetter/ATS/LinkedIn/Interview/Salary/Tracker/SkillsGap tabs",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "5d48441c-eb32-46a2-ab8e-b55fbd26a085",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Premium Template Paywall: 7 free + 20 premium split, Premium Template Activations project (46ukZJmeSkHeGfXG) as admin ledger, usePremiumStatus hook checks user sub against ledger via API, TemplateGallery lock overlays + PRO badges + tier toggle + UpgradeDialog, store-level guard in setResume prevents premium use without activation",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "0c239088-8b72-4fc7-8843-8870da13f2a3",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Stripe Payment Integration: Checkout webhook flow (01KT592PA1DBBDQNAYGHETNCD9), Auto-activation flow (01KT59430DWM5QAAFT0AJ5HANG) — Stripe new_payment triggers task.create in activation ledger, PaymentGate component blocks unpaid users after sign-in, stripe-checkout.ts utility for redirect, UpgradeDialog has real Pay Now button, $29 one-time payment, success/cancel URL params handled",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "84f5c08c-c2e7-4649-910d-a75b5f4ebc7f",
+            "text": {
+              "ops": [
+                {
+                  "insert": "E2E Payment Test: Created Stripe product (prod_UdI2nzbzQ2qjEn) and price (price_1Te1S9Lz84T2EXVk7l2J0xpm) at $29, verified checkout session creation returns valid URL, fixed premium hook to parse fieldValues with /attributes/ prefix paths, fixed activation workflow trigger missing credential, both workflows lint clean and enabled",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": true,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "preferences": {
+    "defaultView": "list",
+    "avatar": {
+      "type": "emoji",
+      "value": "💾"
+    }
+  }
+}

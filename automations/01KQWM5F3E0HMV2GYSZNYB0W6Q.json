@@ -1,0 +1,87 @@
+{
+  "version": "2",
+  "flowTitle": "Generate Cover Letter",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "tone": {
+            "type": "string",
+            "description": "Input for tone"
+          },
+          "skills": {
+            "type": "string",
+            "description": "Input for skills"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Input for fullName"
+          },
+          "jobTitle": {
+            "type": "string",
+            "description": "Input for jobTitle"
+          },
+          "experience": {
+            "type": "string",
+            "description": "Input for experience"
+          },
+          "jobPosting": {
+            "type": "string",
+            "description": "Input for jobPosting"
+          },
+          "companyName": {
+            "type": "string",
+            "description": "Input for companyName"
+          },
+          "hiringManager": {
+            "type": "string",
+            "description": "Input for hiringManager"
+          },
+          "resumeSummary": {
+            "type": "string",
+            "description": "Input for resumeSummary"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "8c5dc35e-33a4-4618-8124-5b9fe285bc49",
+      "valid": true,
+      "displayName": "Generate Cover Letter with AI",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-openai",
+        "pieceVersion": "1.0.0",
+        "actionName": "ai.generate",
+        "input": {
+          "input": "CANDIDATE: {{ trigger[\"body\"][\"fullName\"] }}\n\nPROFESSIONAL SUMMARY:\n{{ trigger[\"body\"][\"resumeSummary\"] }}\n\nWORK EXPERIENCE:\n{{ trigger[\"body\"][\"experience\"] }}\n\nSKILLS: {{ trigger[\"body\"][\"skills\"] }}\n\nTARGET POSITION: {{ trigger[\"body\"][\"jobTitle\"] }} at {{ trigger[\"body\"][\"companyName\"] }}\n\nHIRING MANAGER: {{ trigger[\"body\"][\"hiringManager\"] }}\n\nJOB POSTING:\n{{ trigger[\"body\"][\"jobPosting\"] }}",
+          "model": "openai/gpt-5.4-mini",
+          "prompt": "You are an expert cover letter writer. Write a compelling, personalized cover letter based on the following information.\n\nRULES:\n- Match the tone specified: {{trigger[\"body\"][\"tone\"]}}\n- Directly address the hiring manager if provided\n- Reference specific requirements from the job posting and show how the candidate's experience matches\n- Use concrete achievements and metrics from the candidate's experience\n- Keep it to 3-4 paragraphs (opening hook, experience match, value proposition, closing)\n- Do NOT use generic filler — every sentence should be specific and impactful\n- Do NOT include the header/address block — just the salutation and body\n- End with a professional closing (Sincerely, Best regards, etc.) followed by the candidate's name\n- Output ONLY the cover letter text, no markdown headers or explanations"
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "coverLetter": "{{ 8c5dc35e-33a4-4618-8124-5b9fe285bc49[\"result\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

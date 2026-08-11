@@ -1,0 +1,1300 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "b6c55068-eeda-4ff9-9641-816e59abed94",
+        "text": {
+          "ops": [
+            {
+              "insert": "Job Application Tracker"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "30d90d8f-672f-4364-97b1-27a83d6acbd8",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Frontend Engineer at Stripe",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@cmpNy": "Stripe",
+              "@roleT": "Senior Frontend Engineer",
+              "@stage": {
+                "type": "Select",
+                "optionId": "stage-applied"
+              },
+              "@salRn": "$180k - $220k",
+              "@notes": "Applied through referral from Alex",
+              "@prioR": {
+                "type": "Select",
+                "optionId": "pri-high"
+              },
+              "@datAp": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-05-01"
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "f7c07803-c88a-460e-ae4a-c8ba0a8cec82",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Product Designer at Figma",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@notes": "Recruiter reached out on LinkedIn",
+              "@datAp": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-04-28"
+                }
+              },
+              "@cntNm": "Sarah Chen",
+              "@prioR": {
+                "type": "Select",
+                "optionId": "pri-high"
+              },
+              "@cmpNy": "Figma",
+              "@cntEm": "sarah@figma.com",
+              "@salRn": "$160k - $200k",
+              "@roleT": "Product Designer",
+              "@stage": {
+                "type": "Select",
+                "optionId": "stage-phone"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "26495f5d-00e4-4531-8233-f981755ba782",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Full Stack Dev at Vercel",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@cmpNy": "Vercel",
+              "@roleT": "Full Stack Developer",
+              "@stage": {
+                "type": "Select",
+                "optionId": "stage-interview"
+              },
+              "@salRn": "$170k - $210k",
+              "@notes": "3rd round technical scheduled for next week",
+              "@prioR": {
+                "type": "Select",
+                "optionId": "pri-medium"
+              },
+              "@datAp": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-04-15"
+                }
+              },
+              "@cntNm": "Mike Torres"
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "41322522-e2fc-4d0e-95e7-2ac70f087f9c",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Engineering Manager at Notion",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@notes": "Offer received! Negotiating equity package",
+              "@datAp": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-04-01"
+                }
+              },
+              "@cntNm": "Priya Patel",
+              "@prioR": {
+                "type": "Select",
+                "optionId": "pri-high"
+              },
+              "@cmpNy": "Notion",
+              "@cntEm": "priya@notion.so",
+              "@salRn": "$220k - $280k + equity",
+              "@roleT": "Engineering Manager",
+              "@stage": {
+                "type": "Select",
+                "optionId": "stage-offer"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "7e15d572-7863-4f51-98ef-a070f5aa3b4a",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Backend Engineer at Datadog",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@cmpNy": "Datadog",
+              "@roleT": "Senior Backend Engineer",
+              "@stage": {
+                "type": "Select",
+                "optionId": "stage-rejected"
+              },
+              "@salRn": "$175k - $215k",
+              "@notes": "Position was filled internally",
+              "@prioR": {
+                "type": "Select",
+                "optionId": "pri-low"
+              },
+              "@datAp": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-03-20"
+                }
+              }
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "views": {
+      "list": {
+        "id": "list",
+        "type": "list",
+        "rank": "A",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@cmpNy": {
+            "id": "/attributes/@cmpNy",
+            "fieldPath": "/attributes/@cmpNy",
+            "rank": "z"
+          },
+          "/attributes/@roleT": {
+            "id": "/attributes/@roleT",
+            "fieldPath": "/attributes/@roleT",
+            "rank": "zV"
+          },
+          "/attributes/@stage": {
+            "id": "/attributes/@stage",
+            "fieldPath": "/attributes/@stage",
+            "rank": "zk"
+          },
+          "/attributes/@salRn": {
+            "id": "/attributes/@salRn",
+            "fieldPath": "/attributes/@salRn",
+            "rank": "zs"
+          },
+          "/attributes/@appUr": {
+            "id": "/attributes/@appUr",
+            "fieldPath": "/attributes/@appUr",
+            "rank": "zw"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zy"
+          },
+          "/attributes/@datAp": {
+            "id": "/attributes/@datAp",
+            "fieldPath": "/attributes/@datAp",
+            "rank": "zz"
+          },
+          "/attributes/@cntNm": {
+            "id": "/attributes/@cntNm",
+            "fieldPath": "/attributes/@cntNm",
+            "rank": "zzV"
+          },
+          "/attributes/@cntEm": {
+            "id": "/attributes/@cntEm",
+            "fieldPath": "/attributes/@cntEm",
+            "rank": "zzk"
+          },
+          "/attributes/@prioR": {
+            "id": "/attributes/@prioR",
+            "fieldPath": "/attributes/@prioR",
+            "rank": "zzs"
+          },
+          "9d6e866d-3aa0-4901-8042-1b2054d63028": {
+            "id": "9d6e866d-3aa0-4901-8042-1b2054d63028",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "zzw"
+          }
+        }
+      },
+      "board": {
+        "id": "board",
+        "type": "board",
+        "rank": "B",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@cmpNy": {
+            "id": "/attributes/@cmpNy",
+            "fieldPath": "/attributes/@cmpNy",
+            "rank": "z"
+          },
+          "/attributes/@roleT": {
+            "id": "/attributes/@roleT",
+            "fieldPath": "/attributes/@roleT",
+            "rank": "zV"
+          },
+          "/attributes/@stage": {
+            "id": "/attributes/@stage",
+            "fieldPath": "/attributes/@stage",
+            "rank": "zk"
+          },
+          "/attributes/@salRn": {
+            "id": "/attributes/@salRn",
+            "fieldPath": "/attributes/@salRn",
+            "rank": "zs"
+          },
+          "/attributes/@appUr": {
+            "id": "/attributes/@appUr",
+            "fieldPath": "/attributes/@appUr",
+            "rank": "zw"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zy"
+          },
+          "/attributes/@datAp": {
+            "id": "/attributes/@datAp",
+            "fieldPath": "/attributes/@datAp",
+            "rank": "zz"
+          },
+          "/attributes/@cntNm": {
+            "id": "/attributes/@cntNm",
+            "fieldPath": "/attributes/@cntNm",
+            "rank": "zzV"
+          },
+          "/attributes/@cntEm": {
+            "id": "/attributes/@cntEm",
+            "fieldPath": "/attributes/@cntEm",
+            "rank": "zzk"
+          },
+          "/attributes/@prioR": {
+            "id": "/attributes/@prioR",
+            "fieldPath": "/attributes/@prioR",
+            "rank": "zzs"
+          },
+          "5dcc93e9-2fb6-4be9-a687-09412b08ff17": {
+            "id": "5dcc93e9-2fb6-4be9-a687-09412b08ff17",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "zzw"
+          }
+        }
+      },
+      "mindmap": {
+        "id": "mindmap",
+        "type": "mindmap",
+        "rank": "D",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@cmpNy": {
+            "id": "/attributes/@cmpNy",
+            "fieldPath": "/attributes/@cmpNy",
+            "rank": "z"
+          },
+          "/attributes/@roleT": {
+            "id": "/attributes/@roleT",
+            "fieldPath": "/attributes/@roleT",
+            "rank": "zV"
+          },
+          "/attributes/@stage": {
+            "id": "/attributes/@stage",
+            "fieldPath": "/attributes/@stage",
+            "rank": "zk"
+          },
+          "/attributes/@salRn": {
+            "id": "/attributes/@salRn",
+            "fieldPath": "/attributes/@salRn",
+            "rank": "zs"
+          },
+          "/attributes/@appUr": {
+            "id": "/attributes/@appUr",
+            "fieldPath": "/attributes/@appUr",
+            "rank": "zw"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zy"
+          },
+          "/attributes/@datAp": {
+            "id": "/attributes/@datAp",
+            "fieldPath": "/attributes/@datAp",
+            "rank": "zz"
+          },
+          "/attributes/@cntNm": {
+            "id": "/attributes/@cntNm",
+            "fieldPath": "/attributes/@cntNm",
+            "rank": "zzV"
+          },
+          "/attributes/@cntEm": {
+            "id": "/attributes/@cntEm",
+            "fieldPath": "/attributes/@cntEm",
+            "rank": "zzk"
+          },
+          "/attributes/@prioR": {
+            "id": "/attributes/@prioR",
+            "fieldPath": "/attributes/@prioR",
+            "rank": "zzs"
+          },
+          "4eae676f-03bd-44d6-bc95-b8600a435311": {
+            "id": "4eae676f-03bd-44d6-bc95-b8600a435311",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "zzw"
+          }
+        }
+      },
+      "orgchart": {
+        "id": "orgchart",
+        "type": "orgchart",
+        "rank": "E",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@cmpNy": {
+            "id": "/attributes/@cmpNy",
+            "fieldPath": "/attributes/@cmpNy",
+            "rank": "z"
+          },
+          "/attributes/@roleT": {
+            "id": "/attributes/@roleT",
+            "fieldPath": "/attributes/@roleT",
+            "rank": "zV"
+          },
+          "/attributes/@stage": {
+            "id": "/attributes/@stage",
+            "fieldPath": "/attributes/@stage",
+            "rank": "zk"
+          },
+          "/attributes/@salRn": {
+            "id": "/attributes/@salRn",
+            "fieldPath": "/attributes/@salRn",
+            "rank": "zs"
+          },
+          "/attributes/@appUr": {
+            "id": "/attributes/@appUr",
+            "fieldPath": "/attributes/@appUr",
+            "rank": "zw"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zy"
+          },
+          "/attributes/@datAp": {
+            "id": "/attributes/@datAp",
+            "fieldPath": "/attributes/@datAp",
+            "rank": "zz"
+          },
+          "/attributes/@cntNm": {
+            "id": "/attributes/@cntNm",
+            "fieldPath": "/attributes/@cntNm",
+            "rank": "zzV"
+          },
+          "/attributes/@cntEm": {
+            "id": "/attributes/@cntEm",
+            "fieldPath": "/attributes/@cntEm",
+            "rank": "zzk"
+          },
+          "/attributes/@prioR": {
+            "id": "/attributes/@prioR",
+            "fieldPath": "/attributes/@prioR",
+            "rank": "zzs"
+          },
+          "bc059e45-c0a5-4023-ae29-df1d707c1cb6": {
+            "id": "bc059e45-c0a5-4023-ae29-df1d707c1cb6",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "zzw"
+          }
+        }
+      },
+      "gantt": {
+        "id": "gantt",
+        "type": "gantt",
+        "rank": "F",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F",
+            "hidden": true
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N",
+            "hidden": true
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@cmpNy": {
+            "id": "/attributes/@cmpNy",
+            "fieldPath": "/attributes/@cmpNy",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@roleT": {
+            "id": "/attributes/@roleT",
+            "fieldPath": "/attributes/@roleT",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@stage": {
+            "id": "/attributes/@stage",
+            "fieldPath": "/attributes/@stage",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@salRn": {
+            "id": "/attributes/@salRn",
+            "fieldPath": "/attributes/@salRn",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@appUr": {
+            "id": "/attributes/@appUr",
+            "fieldPath": "/attributes/@appUr",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@datAp": {
+            "id": "/attributes/@datAp",
+            "fieldPath": "/attributes/@datAp",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@cntNm": {
+            "id": "/attributes/@cntNm",
+            "fieldPath": "/attributes/@cntNm",
+            "rank": "zzV",
+            "hidden": false
+          },
+          "/attributes/@cntEm": {
+            "id": "/attributes/@cntEm",
+            "fieldPath": "/attributes/@cntEm",
+            "rank": "zzk",
+            "hidden": false
+          },
+          "/attributes/@prioR": {
+            "id": "/attributes/@prioR",
+            "fieldPath": "/attributes/@prioR",
+            "rank": "zzs",
+            "hidden": false
+          },
+          "46220bb2-18cf-4445-a2c8-48256a90f122": {
+            "id": "46220bb2-18cf-4445-a2c8-48256a90f122",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "zzw"
+          }
+        }
+      },
+      "table": {
+        "id": "table",
+        "type": "table",
+        "rank": "V",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F",
+            "hidden": true
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N",
+            "hidden": true
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@cmpNy": {
+            "id": "/attributes/@cmpNy",
+            "fieldPath": "/attributes/@cmpNy",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@roleT": {
+            "id": "/attributes/@roleT",
+            "fieldPath": "/attributes/@roleT",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@stage": {
+            "id": "/attributes/@stage",
+            "fieldPath": "/attributes/@stage",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@salRn": {
+            "id": "/attributes/@salRn",
+            "fieldPath": "/attributes/@salRn",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@appUr": {
+            "id": "/attributes/@appUr",
+            "fieldPath": "/attributes/@appUr",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@datAp": {
+            "id": "/attributes/@datAp",
+            "fieldPath": "/attributes/@datAp",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@cntNm": {
+            "id": "/attributes/@cntNm",
+            "fieldPath": "/attributes/@cntNm",
+            "rank": "zzV",
+            "hidden": false
+          },
+          "/attributes/@cntEm": {
+            "id": "/attributes/@cntEm",
+            "fieldPath": "/attributes/@cntEm",
+            "rank": "zzk",
+            "hidden": false
+          },
+          "/attributes/@prioR": {
+            "id": "/attributes/@prioR",
+            "fieldPath": "/attributes/@prioR",
+            "rank": "zzs",
+            "hidden": false
+          },
+          "94905ce9-1147-4e78-adb1-38bddbad817e": {
+            "id": "94905ce9-1147-4e78-adb1-38bddbad817e",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "zzw"
+          }
+        }
+      },
+      "actionsheet": {
+        "id": "actionsheet",
+        "type": "actionsheet",
+        "rank": "F",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "372eeb9d-f1b3-4fa9-a1f7-33b44626b174": {
+            "id": "372eeb9d-f1b3-4fa9-a1f7-33b44626b174",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z"
+          }
+        }
+      }
+    },
+    "fields": {
+      "@notes": {
+        "type": "string",
+        "displayName": "Notes"
+      },
+      "@datAp": {
+        "type": "DateTime",
+        "title": "Date Applied"
+      },
+      "@cntNm": {
+        "type": "string",
+        "displayName": "Contact Name"
+      },
+      "@prioR": {
+        "type": "Select",
+        "displayName": "Priority",
+        "options": {
+          "pri-high": {
+            "id": "pri-high",
+            "name": "High",
+            "color": "#EF4444",
+            "rank": "0"
+          },
+          "pri-medium": {
+            "id": "pri-medium",
+            "name": "Medium",
+            "color": "#F59E0B",
+            "rank": "1"
+          },
+          "pri-low": {
+            "id": "pri-low",
+            "name": "Low",
+            "color": "#6B7280",
+            "rank": "2"
+          }
+        }
+      },
+      "@usrId": {
+        "type": "string",
+        "displayName": "User ID"
+      },
+      "@cmpNy": {
+        "type": "string",
+        "displayName": "Company"
+      },
+      "@cntEm": {
+        "type": "string",
+        "displayName": "Contact Email"
+      },
+      "@salRn": {
+        "type": "string",
+        "displayName": "Salary Range"
+      },
+      "@appUr": {
+        "type": "string",
+        "displayName": "Application URL"
+      },
+      "@roleT": {
+        "type": "string",
+        "displayName": "Role Title"
+      },
+      "@stage": {
+        "type": "Select",
+        "displayName": "Stage",
+        "options": {
+          "stage-applied": {
+            "id": "stage-applied",
+            "name": "Applied",
+            "color": "#3B82F6",
+            "rank": "0"
+          },
+          "stage-phone": {
+            "id": "stage-phone",
+            "name": "Phone Screen",
+            "color": "#8B5CF6",
+            "rank": "1"
+          },
+          "stage-interview": {
+            "id": "stage-interview",
+            "name": "Interview",
+            "color": "#F59E0B",
+            "rank": "2"
+          },
+          "stage-offer": {
+            "id": "stage-offer",
+            "name": "Offer",
+            "color": "#10B981",
+            "rank": "3"
+          },
+          "stage-rejected": {
+            "id": "stage-rejected",
+            "name": "Rejected",
+            "color": "#EF4444",
+            "rank": "4"
+          }
+        }
+      }
+    }
+  },
+  "preferences": {
+    "defaultView": "board",
+    "avatar": {
+      "type": "emoji",
+      "value": "📣"
+    }
+  }
+}

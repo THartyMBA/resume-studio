@@ -1,0 +1,154 @@
+{
+  "version": "2",
+  "flowTitle": "Stripe Checkout v2",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "description": "Input for mode"
+          },
+          "name": {
+            "type": "string",
+            "description": "Input for name"
+          },
+          "plan": {
+            "type": "string",
+            "description": "Input for plan"
+          },
+          "email": {
+            "type": "string",
+            "description": "Input for email"
+          },
+          "price_id": {
+            "type": "string",
+            "description": "Input for price_id"
+          },
+          "user_sub": {
+            "type": "string",
+            "description": "Input for user_sub"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "63061b8f-8064-4b9e-b191-2c7138e44286",
+      "valid": true,
+      "displayName": "Payment vs Subscription",
+      "type": "BRANCH",
+      "settings": {},
+      "paths": [
+        {
+          "name": "24ca0846-b46a-4eba-8f08-e649d023b374",
+          "valid": true,
+          "displayName": "One-time Payment",
+          "type": "BRANCH_PATH",
+          "settings": {
+            "ruleset": {
+              "type": "CUSTOM",
+              "input": {
+                "type": "or",
+                "value": [
+                  {
+                    "type": "and",
+                    "value": [
+                      {
+                        "condition": "text_matches",
+                        "id": "0d9fe372-f618-4d24-8357-cddaea0c9b4b",
+                        "data": "{{ trigger[\"body\"][\"mode\"] }}",
+                        "comparator": "payment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "actions": [
+            {
+              "name": "6d8d5e20-fe81-4d6b-92ed-099ac886b7e4",
+              "valid": false,
+              "displayName": "Create Payment Checkout",
+              "type": "PIECE",
+              "settings": {
+                "pieceName": "@taskade/automade-piece-stripe",
+                "pieceVersion": "1.0.0",
+                "actionName": "createCheckoutSession",
+                "input": {
+                  "mode": "payment",
+                  "cancel_url": "https://resume-studio-3499.taskade.app?payment=cancelled",
+                  "line_items": "[{\"price\":\"{{ trigger.body.price_id }}\",\"quantity\":1}]",
+                  "success_url": "https://resume-studio-3499.taskade.app?payment=success&plan={{ trigger.body.plan }}",
+                  "customer_email": "{{ trigger.body.email }}",
+                  "client_reference_id": "{{ trigger.body.user_sub }}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "262db045-ae90-48e7-ae56-581137c620ee",
+          "valid": true,
+          "displayName": "Subscription",
+          "type": "BRANCH_PATH",
+          "settings": {
+            "ruleset": {
+              "type": "FALLBACK"
+            }
+          },
+          "actions": [
+            {
+              "name": "440dff4b-4fb7-4225-8ad3-4ef017faa801",
+              "valid": false,
+              "displayName": "Create Subscription Checkout",
+              "type": "PIECE",
+              "settings": {
+                "pieceName": "@taskade/automade-piece-stripe",
+                "pieceVersion": "1.0.0",
+                "actionName": "createCheckoutSession",
+                "input": {
+                  "mode": "subscription",
+                  "cancel_url": "https://resume-studio-3499.taskade.app?payment=cancelled",
+                  "line_items": "[{\"price\":\"{{ trigger.body.price_id }}\",\"quantity\":1}]",
+                  "success_url": "https://resume-studio-3499.taskade.app?payment=success&plan={{ trigger.body.plan }}",
+                  "customer_email": "{{ trigger.body.email }}",
+                  "client_reference_id": "{{ trigger.body.user_sub }}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "checkout_url_payment": "{{ 6d8d5e20-fe81-4d6b-92ed-099ac886b7e4[\"url\"] }}"
+            },
+            {
+              "checkout_url_subscription": "{{ 440dff4b-4fb7-4225-8ad3-4ef017faa801[\"url\"] }}"
+            },
+            {
+              "session_id": "{{ 6d8d5e20-fe81-4d6b-92ed-099ac886b7e4[\"id\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

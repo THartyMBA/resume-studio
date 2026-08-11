@@ -1,0 +1,74 @@
+{
+  "version": "2",
+  "flowTitle": "Auto-Activate Premium on Stripe Payment",
+  "trigger": {
+    "valid": false,
+    "displayName": "When Stripe Payment Succeeds",
+    "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@taskade/automade-piece-stripe",
+      "pieceVersion": "1.0.0",
+      "triggerName": "new_payment",
+      "input": {}
+    }
+  },
+  "actions": [
+    {
+      "name": "a307f37c-82e7-475d-956d-e2e7e0c28de5",
+      "valid": false,
+      "displayName": "Add User to Premium Activations",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-taskade",
+        "pieceVersion": "1.0.0",
+        "actionName": "task.create",
+        "input": {
+          "fields": {
+            "@actSt": {
+              "data": {
+                "value": "status-active"
+              },
+              "rank": "0",
+              "fieldId": "@actSt"
+            },
+            "@email": {
+              "data": {
+                "value": "{{ trigger[\"billing_details\"][\"email\"] }}"
+              },
+              "rank": "1",
+              "fieldId": "@email"
+            },
+            "@notes": {
+              "data": {
+                "value": "Stripe charge {{ trigger[\"id\"] }} — {{ trigger[\"receipt_url\"] }}"
+              },
+              "rank": "2",
+              "fieldId": "@notes"
+            },
+            "@usrId": {
+              "data": {
+                "value": "{{ trigger[\"billing_details\"][\"email\"] }}"
+              },
+              "rank": "3",
+              "fieldId": "@usrId"
+            }
+          },
+          "content": "{{ trigger[\"billing_details\"][\"name\"] }}",
+          "position": "beforeend",
+          "projectId": {
+            "type": "flow-template-variable-input-type",
+            "id": "46ukZJmeSkHeGfXG"
+          }
+        }
+      }
+    }
+  ],
+  "variables": {
+    "46ukZJmeSkHeGfXG": {
+      "id": "46ukZJmeSkHeGfXG",
+      "rank": "V",
+      "type": "string",
+      "format": "taskade-project-id"
+    }
+  }
+}

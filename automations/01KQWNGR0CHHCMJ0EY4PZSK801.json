@@ -1,0 +1,148 @@
+{
+  "version": "2",
+  "flowTitle": "ATS Resume Analyzer",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "resumeText": {
+            "type": "string",
+            "description": "Input for resumeText"
+          },
+          "jobDescription": {
+            "type": "string",
+            "description": "Input for jobDescription"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "29adb066-df17-4c57-8385-c78070aa4353",
+      "valid": true,
+      "displayName": "Analyze Resume ATS Compatibility",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-openai",
+        "pieceVersion": "1.0.0",
+        "actionName": "ai.categorize",
+        "input": {
+          "input": "You are an expert ATS (Applicant Tracking System) analyst. Analyze this resume against the job description.\n\nRESUME:\n{{ trigger[\"body\"][\"resumeText\"] }}\n\nJOB DESCRIPTION:\n{{ trigger[\"body\"][\"jobDescription\"] }}\n\nAnalyze:\n1. Calculate an overall ATS compatibility score (0-100)\n2. Identify keywords from the job description that ARE present in the resume (matched)\n3. Identify important keywords from the job description that are MISSING from the resume\n4. Score these categories (0-100 each): keyword_match, formatting, experience_relevance, skills_alignment, education_fit\n5. Provide 5-7 specific, actionable improvement tips\n6. Give a brief overall assessment summary\n\nBe thorough and specific. Every keyword should be a real word or phrase from the job description.",
+          "model": "openai/gpt-5.4-mini",
+          "output": {
+            "type": "custom",
+            "schema": {
+              "type": "object",
+              "required": [
+                "overallScore",
+                "summary",
+                "matchedKeywords",
+                "missingKeywords",
+                "categoryScores",
+                "improvements"
+              ],
+              "properties": {
+                "summary": {
+                  "type": "string",
+                  "description": "Brief 2-3 sentence overall assessment"
+                },
+                "improvements": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "category",
+                      "priority",
+                      "suggestion"
+                    ],
+                    "properties": {
+                      "category": {
+                        "type": "string",
+                        "description": "Category: keywords, formatting, experience, skills, education, or general"
+                      },
+                      "priority": {
+                        "type": "string",
+                        "description": "high, medium, or low"
+                      },
+                      "suggestion": {
+                        "type": "string",
+                        "description": "Specific actionable improvement"
+                      }
+                    }
+                  }
+                },
+                "overallScore": {
+                  "type": "number",
+                  "description": "Overall ATS score 0-100"
+                },
+                "categoryScores": {
+                  "type": "object",
+                  "required": [
+                    "keywordMatch",
+                    "formatting",
+                    "experienceRelevance",
+                    "skillsAlignment",
+                    "educationFit"
+                  ],
+                  "properties": {
+                    "formatting": {
+                      "type": "number"
+                    },
+                    "educationFit": {
+                      "type": "number"
+                    },
+                    "keywordMatch": {
+                      "type": "number"
+                    },
+                    "skillsAlignment": {
+                      "type": "number"
+                    },
+                    "experienceRelevance": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "matchedKeywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Keywords from job description found in resume"
+                },
+                "missingKeywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Important keywords from job description NOT in resume"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "result": "{{ 29adb066-df17-4c57-8385-c78070aa4353[\"result\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

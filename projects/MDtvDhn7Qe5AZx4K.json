@@ -1,0 +1,2458 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "92d4a12a-d1a4-4547-8696-b61dc3fa475d",
+        "text": {
+          "ops": [
+            {
+              "insert": "TASKS.md"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "f4b382d2-777b-4598-b759-cfd55424910c",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Done",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h2",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "dee5030a-7226-4148-a771-2ee35a9c65d4",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-14 17:00 UTC - Primary Request and Intent",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "d00499a2-e581-4d59-a4f3-e11fda6cbab5",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Primary Request and Intent: The user had three explicit requests across the conversation:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "fefd6e3d-6364-4008-881d-6e7aa35368f4",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Request 1",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": \"my test set up failed to start checkout?\" — Fix the Stripe payment checkout flow so it works",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "65ed98f1-269c-446a-be6b-c19ad821da16",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Request 2",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": \"still failed to start checkout please try again\" — After the first fix, checkout still didn't work",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "fdb8e889-7e0d-4248-82ba-a7354f8983d0",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Request 3",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": \"stripe is hanging and not loading but it seems to work well otherwise. Now I need a way for me to bypass that and get into the app without paying myself haha\" — Fix Stripe loading issues AND get admin access to skip payment",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "80a9957e-f247-4746-b97a-54782a84fa06",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Files and Code Sections:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "bb8f599d-70ab-4ef1-a114-f95b4c1c90a7",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/app/src/lib/stripe-checkout.ts",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — Core checkout library const PAYMENT_WEBHOOK_URL = '/api/taskade/webhooks/01KXGQYM7ZCTPR9EP9AANTP57G/run'; const SUBSCRIPTION_WEBHOOK_URL = '/api/taskade/webhooks/01KXGQYTXPNXTRM0W8KDHEHR8D/run'; // ... in redirectToCheckout: const webhookUrl = def.mode === 'subscription' ? SUBSCRIPTION_WEBHOOK_URL : PAYMENT_WEBHOOK_URL; const res = await axios.post(webhookUrl, {   user_sub: userSub,   email,   name: name || '',   plan,   price_id: def.priceId, }); const data = res.data?.body ?? res.data ?? {}; const url = data.checkout_url; if (!url) throw new Error('Failed to create checkout session'); window.location.href = url;",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "ae607ec3-2de2-41e7-a1e1-ed0b7a4a83d7",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Changed from single webhook URL to two separated URLs based on plan mode",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "6f50dced-97c3-4587-a511-a35a29b5e968",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Changed response parsing from res.data.output to res.data.body",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "4535b4a8-3093-42ab-acdf-91d3c923ec76",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Final state",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": ":",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "07c8ca06-c679-4991-9b9f-590430944f9f",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/app/src/components/payment-gate.tsx",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — Payment gate UI component",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "724367e8-a344-4045-b4ef-48af9eb92a71",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "No changes made in this session",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "6579b85c-fdf2-4b61-ac23-3e3e6697637a",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Shows plan selector when hasAccess is false",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "03a58391-275d-4354-8839-803901973d31",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Gets user sub/email from auth.user?.profile?.sub and auth.user?.profile?.email",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "1cff6683-970a-4066-bfe3-ca542f98913a",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/app/src/hooks/use-user-tier.ts",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — User tier checking hook",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "0939aa71-8110-4067-a251-c4dba88505c8",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "No changes made in this session",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "5528ff68-6098-4272-a037-68adb9e348cc",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Queries project 46ukZJmeSkHeGfXG for nodes matching user sub OR email",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "d3d4dec1-84d3-4255-b99d-fe94ea477362",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Returns { account, tier, hasAccess, isAdmin, loading, ... }",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "845a2033-5eee-49e5-84ca-942b78c132bb",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Admin tier gives: tier: 'admin', hasPremiumTemplates: true, aiCreditsRemaining: -1, maxClients: 999",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "7a3ed658-db72-44ea-b939-8a8c57566c40",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "NEW FLOW: ",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": "Stripe Payment Checkout",
+                              "attributes": {
+                                "bold": true,
+                                "link": "https://www.taskade.com/flows/01KXGQYM7ZCTPR9EP9AANTP57G"
+                              }
+                            },
+                            {
+                              "insert": " (ID: 01KXGQYM7ZCTPR9EP9AANTP57G)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "1c74816d-e41b-4b0a-9409-aef8e4bb0efb",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Dead simple: webhook trigger → single Stripe action (mode=payment) → JsonOutput",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "84b47585-8027-4577-9852-ea1b60c7530f",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Action ID: 05c70a3b-83ef-414f-9a24-a33c0e647488",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "36892ef9-8358-42e5-bc94-6099c1d8e675",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Returns { checkout_url, session_id }",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "911bbb24-9eaa-4234-aa9b-3667290435de",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Tested successfully",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": " — returns real Stripe checkout URL",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "e220effd-d372-4917-ad1f-bd4d283ff43d",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "NEW FLOW: ",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": "Stripe Subscription Checkout",
+                              "attributes": {
+                                "bold": true,
+                                "link": "https://www.taskade.com/flows/01KXGQYTXPNXTRM0W8KDHEHR8D"
+                              }
+                            },
+                            {
+                              "insert": " (ID: 01KXGQYTXPNXTRM0W8KDHEHR8D)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "99f0655f-8d4e-43ab-9a5e-7e7555f41eb7",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Dead simple: webhook trigger → single Stripe action (mode=subscription) → JsonOutput",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "c050141b-abd1-488a-b934-28237704e180",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Action ID: 43d1ce62-ac3f-4c6f-a173-2ae4dc4d4b23",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "5e7d3401-16e0-4b81-9918-c21b094366a4",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Returns { checkout_url, session_id }",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "fcce8900-f444-4d3a-8509-a9b77e422779",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Tested successfully",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": " — returns real Stripe checkout URL",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "8bcfab81-e084-4e45-91e3-58920f082e81",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "User Accounts Project",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " (ID: 46ukZJmeSkHeGfXG)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "30076e8e-c32c-45e6-9e7d-311d79486d03",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Contains admin record: sub: \"1378737\", email: tom.hartymba@gmail.com, Tier: Admin, Status: Active",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "2290648b-e896-43f0-bbc7-a38f595563bf",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "This is the only record in the project",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "2e9cc237-a6e3-46f0-a4e0-f2212db3032f",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "OLD/ABANDONED FLOWS",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ":",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "b2b7de10-35c1-4a87-a701-7eec4e251e20",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "01KT592PA1DBBDQNAYGHETNCD9 — Original flow, corrupted/broken (flow editor unresponsive)",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "a99b35b3-5fcd-443f-9c1f-74a84a631d65",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "01KXGQTJN02S7S030S39R73408 — v2 branched flow, also not used",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "c8e2f7ac-0950-4083-9c73-767b44d85657",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Errors and fixes:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "0b7c498b-02f3-4b2d-aa82-fa34cbe86ccd",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "truncated -",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "id": "7174787f-3b58-46d1-aed7-8ef8c9a517d3",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-14 16:15 UTC - Primary Request and Intent",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "26abbbad-9c2f-41fb-9ebe-10eb4a06a159",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Primary Request and Intent: The user's explicit request was: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\"my test set up failed to start checkout?\"",
+                          "attributes": {
+                            "bold": true
+                          }
+                        },
+                        {
+                          "insert": " - They were trying to test the Stripe payment checkout flow in the ResumeForge app and it wasn't working. After my first fix attempt, they followed up with: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\"still failed to start checkout please try again.\"",
+                          "attributes": {
+                            "bold": true
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "a86d9def-703c-4c35-aa1d-c4c5b7f7e351",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Files and Code Sections:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "ef7112a6-1025-4023-a723-90af7bd2e9f6",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/app/src/lib/stripe-checkout.ts",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — Core checkout library const data = res.data?.body ?? res.data ?? {}; const url = data.checkout_url_payment || data.checkout_url_subscription;",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "90899595-ef5f-4242-bae7-64bda0833f50",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Uses relative URL CHECKOUT_WEBHOOK_URL = '/api/taskade/webhooks/01KT592PA1DBBDQNAYGHETNCD9/run'",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "5a55c840-b0d0-47d3-aca2-2cea68fa3806",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Defines 5 plans: lifetime ($49), monthly ($19/mo), agency ($99/mo), premium_templates ($29), ai_credits ($9)",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "9a02cf00-51c7-4af2-a8c2-e4fc85e92e7b",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Bug fix applied",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": ": Changed line 123 from res.data?.output ?? res.data ?? {} to res.data?.body ?? res.data ?? {} to match API response wrapping",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "1fe03bfe-8fc2-41cc-a656-b435ed41a47d",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/app/src/components/payment-gate.tsx",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — Payment gate/plan selector UI",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "6f8d9421-49ec-451f-9eb3-cb1139860937",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Shows plan cards for SIGNUP_PLANS (lifetime, monthly, agency)",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "b4ad422d-a99b-43eb-8308-cb2121c0fe4b",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Calls redirectToCheckout with userSub, email, name, plan from OIDC auth",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "480e5f24-304f-4e6a-94ce-ad1b0b225d56",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Catches errors and shows toast: \"Failed to start checkout. Please try again.\"",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "96910b00-f5df-4802-994c-a34cb00812a0",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/automations/01KT592PA1DBBDQNAYGHETNCD9__Create-Stripe-Checkout-Session.taskflow",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — The checkout workflow <Workflow id=\"01KT592PA1DBBDQNAYGHETNCD9\" displayName=\"Create Stripe Checkout Session\">   <CustomTrigger id=\"trigger\" displayName=\"Checkout Request Webhook\" inputSchema={{mode, name, plan, email, price_id, user_sub}} kind=\"webhook\">     <Action id=\"08f72de7-e363-4b86-8393-9ff85db7b69d\" displayName=\"Create Stripe Checkout Session\"        action=\"@taskade/automade-piece-stripe/createCheckoutSession\"        $mode=\"payment\"        $line_items={liquid_expr: [{\"price\":\"{{ trigger[\"body\"][\"price_id\"] }}\",\"quantity\":1}]}        $success_url={liquid_expr: \"https://resume-studio-3499.taskade.app?payment=success&plan={{ trigger[\"body\"][\"plan\"] }}\"}        $cancel_url=\"https://resume-studio-3499.taskade.app?payment=cancelled\"        $customer_email={liquid_expr: \"{{ trigger[\"body\"][\"email\"] }}\"}        $client_reference_id={liquid_expr: \"{{ trigger[\"body\"][\"user_sub\"] }}\"}        credential=\"01KT592GNF0FBQWR77E3B79GF4\"/>     <JsonOutput id=\"output\" value={{       checkout_url_payment: new_action_url,       checkout_url_subscription: new_action_url,       session_id: new_action_id     }}/>   </CustomTrigger> </Workflow>",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "7cc3e5b2-de4e-463b-b65d-f715f125b5ec",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Multiple revisions made",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": " during this conversation:",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": [
+                              {
+                                "type": "text",
+                                "id": "043428f1-5528-458f-ab33-662c27ae2714",
+                                "text": {
+                                  "ops": [
+                                    {
+                                      "insert": "Originally had Branch with Subscription path (no condition, first) + Payment path (with condition, second) — WRONG ORDER",
+                                      "attributes": {}
+                                    },
+                                    {
+                                      "insert": "\n",
+                                      "attributes": {
+                                        "paragraph": true
+                                      }
+                                    }
+                                  ]
+                                },
+                                "format": {
+                                  "node": "number",
+                                  "children": null
+                                },
+                                "collapsed": false,
+                                "completed": false,
+                                "children": []
+                              },
+                              {
+                                "type": "text",
+                                "id": "e4ce1c60-9ee1-4fa0-9ca8-f717a4060f79",
+                                "text": {
+                                  "ops": [
+                                    {
+                                      "insert": "Removed Branch entirely",
+                                      "attributes": {}
+                                    },
+                                    {
+                                      "insert": "\n",
+                                      "attributes": {
+                                        "paragraph": true
+                                      }
+                                    }
+                                  ]
+                                },
+                                "format": {
+                                  "node": "number",
+                                  "children": null
+                                },
+                                "collapsed": false,
+                                "completed": false,
+                                "children": []
+                              },
+                              {
+                                "type": "text",
+                                "id": "4c080aea-fc35-477c-b316-d7116b825523",
+                                "text": {
+                                  "ops": [
+                                    {
+                                      "insert": "Added single unified action with $mode as liquid expr — FAILED (option type doesn't accept liquid)",
+                                      "attributes": {}
+                                    },
+                                    {
+                                      "insert": "\n",
+                                      "attributes": {
+                                        "paragraph": true
+                                      }
+                                    }
+                                  ]
+                                },
+                                "format": {
+                                  "node": "number",
+                                  "children": null
+                                },
+                                "collapsed": false,
+                                "completed": false,
+                                "children": []
+                              },
+                              {
+                                "type": "text",
+                                "id": "7d12574c-885a-4c52-9fc4-1104fd1e3aa8",
+                                "text": {
+                                  "ops": [
+                                    {
+                                      "insert": "Hardcoded $mode=\"payment\" — flow enabled",
+                                      "attributes": {}
+                                    },
+                                    {
+                                      "insert": "\n",
+                                      "attributes": {
+                                        "paragraph": true
+                                      }
+                                    }
+                                  ]
+                                },
+                                "format": {
+                                  "node": "number",
+                                  "children": null
+                                },
+                                "collapsed": false,
+                                "completed": false,
+                                "children": []
+                              },
+                              {
+                                "type": "text",
+                                "id": "1c7174f0-e261-4dd0-8418-ab4507babdfb",
+                                "text": {
+                                  "ops": [
+                                    {
+                                      "insert": "Current state",
+                                      "attributes": {
+                                        "bold": true
+                                      }
+                                    },
+                                    {
+                                      "insert": ": Output still references old deleted action IDs (d72fea9d..., 9ad15441...) in the file on disk, but I attempted to update output with setJsonOutput to use the new action ID 08f72de7...",
+                                      "attributes": {}
+                                    },
+                                    {
+                                      "insert": "\n",
+                                      "attributes": {
+                                        "paragraph": true
+                                      }
+                                    }
+                                  ]
+                                },
+                                "format": {
+                                  "node": "number",
+                                  "children": null
+                                },
+                                "collapsed": false,
+                                "completed": false,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "text",
+                            "id": "dc3445fb-a33d-4fcc-9433-62dfcf8c6443",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Current flow structure",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": " (from active state):",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "53bac79b-31b9-4e03-be7b-87bd84de32af",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "CRITICAL",
+                                  "attributes": {
+                                    "bold": true
+                                  }
+                                },
+                                {
+                                  "insert": ": Mode is hardcoded to \"payment\" — subscription plans won't work",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "2020720a-e7c5-4a02-91c9-64f19266cb81",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/pieces/TaskadeAutomadePieceStripeRegistry.generated.ts",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — Stripe piece type registry",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "0925cef4-9226-4168-b1f2-f86b892cacb6",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "createCheckoutSession has mode as option type with values: payment, subscription, setup",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "df701758-837a-4ba5-bef6-a7140f363380",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "line_items is string type (requires JSON string)",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "90089118-98f9-4a94-b9bd-f6281e1095d1",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "url in result is [\"string\", \"null\"]",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "53e66875-5adc-41c8-8930-1850a34564fc",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "success_url is required",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "2f1e69ee-f6c1-4bf0-9918-830d11dbc853",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "/projects/memories/MtTro9u29ziBCWtw__ResumeForge-Build-Log.taskproj",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": " — Build log",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": [
+                          {
+                            "type": "text",
+                            "id": "8519d2ed-951b-40f3-acbc-88cf5b338a10",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Shows all completed tasks including Stripe integration",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          },
+                          {
+                            "type": "text",
+                            "id": "909082da-2dc8-4547-b8c0-a1b680791a8f",
+                            "text": {
+                              "ops": [
+                                {
+                                  "insert": "Price IDs: premium_templates = price_1Te1S9Lz84T2EXVk7l2J0xpm, lifetime = price_1Te1ciLz84T2EXVkPArUZ8Zo, monthly = price_1Te1cnLz84T2EXVkfbd6EfQy, agency = price_1Te1csLz84T2EXVk4JZXuhxq, ai_credits = price_1Te1cxLz84T2EXVknIucwG9e",
+                                  "attributes": {}
+                                },
+                                {
+                                  "insert": "\n",
+                                  "attributes": {
+                                    "paragraph": true
+                                  }
+                                }
+                              ]
+                            },
+                            "format": {
+                              "node": "bullet",
+                              "children": null
+                            },
+                            "collapsed": false,
+                            "completed": false,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "072ffa8c-be6a-46ec-9999-27fe1f3baf8e",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Errors and Fixes:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "9885f5de-a1a9-4304-b56d-990ea3a75eb9",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Bug #1: Wrong response parsing in stripe-checkout.ts",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "5dee353c-4b94-43c3-98dd-d803b6e2097d",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "truncated -",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "3ce72070-12fe-472f-93c3-233294a6b9ba",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Knowledge",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h2",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "6f80a7e5-dcb4-4870-9f58-bacd3738e810",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-14 17:00 UTC - Key Technical Concepts",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "d08627a0-b04f-4edd-820b-c5cc41f698bf",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Key Technical Concepts:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "b7403386-0636-4db3-b3d9-81005de20219",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Taskade Automation Flow Framework",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": CustomTrigger with inputSchema, Branch/BranchPath with condition expressions, JsonOutput, node add/remove/move operations",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "81f0c60c-a84f-4e7c-9a58-295fbae1c143",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Stripe createCheckoutSession piece",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": mode is option type (values: payment/subscription/setup) — ",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "cannot accept liquid expressions",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ", metadata is string type (JSON string) — ",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "not object_literal",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ", line_items is string type (JSON array string)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "1f4fbe96-8394-4dd0-b38e-48aae109ad3c",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "API Gateway",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": Webhook proxying at /api/taskade/webhooks/{flowId}/run wraps responses in { type: \"http_response\", headers, statusCode, body: {...} }",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "4d803b3f-81c4-428f-8498-b4db3364deaf",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Branch condition expressions",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": Bare variable access trigger[\"body\"][\"mode\"] NOT inside string quotes — textCompare(\"text_matches\", trigger[\"body\"][\"mode\"], \"payment\")",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "03aa3ccc-2350-4613-a7ec-4e858769c11c",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Liquid expression syntax",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": Dot notation (trigger.body.price_id) works better than bracket notation in escaped JSON",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "6d6fdfa0-9cfd-414d-8dfb-abe7f20d32d3",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "User Accounts tier system",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": Nodes in project 46ukZJmeSkHeGfXG with fields: @usrId (OIDC sub), @email, @tier (tier-admin/tier-lifetime/tier-monthly/tier-agency), @actSt (status-active/status-revoked), @hasPT (pt-yes/pt-no), @aiCr (credits count)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "id": "8ae05a55-afdd-4ef6-a6bd-6b478830e946",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-14 16:15 UTC - Key Technical Concepts",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "aa209234-eb60-4ff8-8d51-9ab53e725aac",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Key Technical Concepts:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "number",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "c0ddf439-74e9-4874-a637-e691cf4235f9",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Taskade Automation Framework",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": Webhook CustomTriggers with inputSchema, Branch/BranchPath for conditional routing, JsonOutput nodes",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "c38b14cb-05d1-4ed3-862b-8f696d82a4e0",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Stripe Create Checkout Session",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": @taskade/automade-piece-stripe/createCheckoutSession action with mode as option type (not liquid-expression-compatible), requires line_items JSON array string, success_url, cancel_url, etc.",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "40f56337-e370-414c-ad66-fce77e5cb127",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "API Gateway Proxying",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": The webhook endpoint /api/taskade/webhooks/{flowId}/run proxied through the app's domain, wraps response in { type: \"http_response\", headers, statusCode, body: {...} }",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "4b73349b-9e12-456e-a528-973c042f314c",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Branch Logic",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": First BranchPath without condition acts as default/fallback (\"else\" clause). If placed first, it catches ALL cases before conditions are checked",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "55a63fea-5861-4dda-8e6e-a5772d1fce91",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Auth + Payment",
+                              "attributes": {
+                                "bold": true
+                              }
+                            },
+                            {
+                              "insert": ": PaymentGate component in app blocks/premium templates, uses redirectToCheckout to call webhook, then redirects to Stripe hosted page",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "preferences": {
+    "defaultView": "list",
+    "avatar": {
+      "type": "emoji",
+      "value": "🧩"
+    },
+    "coverImageType": "background",
+    "background": {
+      "data": {
+        "value": "bg-random"
+      },
+      "type": "default"
+    }
+  },
+  "pinnedAt": "2026-07-14T16:15:59.828Z"
+}

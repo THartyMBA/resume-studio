@@ -1,0 +1,165 @@
+{
+  "version": "2",
+  "flowTitle": "LinkedIn Profile Optimizer",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "skills": {
+            "type": "string",
+            "description": "Input for skills"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Input for summary"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Input for fullName"
+          },
+          "education": {
+            "type": "string",
+            "description": "Input for education"
+          },
+          "experience": {
+            "type": "string",
+            "description": "Input for experience"
+          },
+          "targetRole": {
+            "type": "string",
+            "description": "Input for targetRole"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "0a4ebad7-2911-41c5-acb0-c80dd3b96fa9",
+      "valid": true,
+      "displayName": "Generate Optimized LinkedIn Profile",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-openai",
+        "pieceVersion": "1.0.0",
+        "actionName": "ai.categorize",
+        "input": {
+          "input": "You are an expert LinkedIn profile writer and personal branding strategist. Optimize this person's LinkedIn profile for maximum visibility, engagement, and recruiter interest.\n\nCANDIDATE: {{ trigger[\"body\"][\"fullName\"] }}\n\nRESUME SUMMARY:\n{{ trigger[\"body\"][\"summary\"] }}\n\nWORK EXPERIENCE:\n{{ trigger[\"body\"][\"experience\"] }}\n\nSKILLS: {{ trigger[\"body\"][\"skills\"] }}\n\nEDUCATION:\n{{ trigger[\"body\"][\"education\"] }}\n\nTARGET ROLE/INDUSTRY: {{ trigger[\"body\"][\"targetRole\"] }}\n\nGuidelines:\n- Headlines: Create 3 compelling options using power words, specific value props, and keyword-rich phrasing. Each under 220 chars.\n- About: Write a first-person narrative (1500-2000 chars) that hooks in the first line, tells a story, highlights achievements with metrics, and ends with a call-to-action. Use line breaks for readability.\n- Experience: For each role, write a LinkedIn-optimized description with an opening impact statement + 3-4 achievement bullets using the STAR method with metrics. Make it more narrative than a resume.\n- Skills: Suggest 15 most strategic skills ordered by LinkedIn algorithm priority (most endorseable first).\n- Tips: Give 5 specific profile optimization tips for their particular industry/role.",
+          "model": "openai/gpt-5.4-mini",
+          "output": {
+            "type": "custom",
+            "schema": {
+              "type": "object",
+              "required": [
+                "headlines",
+                "about",
+                "experiences",
+                "topSkills",
+                "profileTips"
+              ],
+              "properties": {
+                "about": {
+                  "type": "string",
+                  "description": "Optimized About/Summary section in first person"
+                },
+                "headlines": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "text",
+                      "style"
+                    ],
+                    "properties": {
+                      "text": {
+                        "type": "string",
+                        "description": "The headline text"
+                      },
+                      "style": {
+                        "type": "string",
+                        "description": "Style label: 'keyword-rich', 'story-driven', or 'achievement-focused'"
+                      }
+                    }
+                  },
+                  "description": "3 optimized headline options"
+                },
+                "topSkills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Top 15 skills optimized for LinkedIn algorithm"
+                },
+                "experiences": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "company",
+                      "description"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "company": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "LinkedIn-optimized role description with bullets"
+                      }
+                    }
+                  },
+                  "description": "Optimized experience entries"
+                },
+                "profileTips": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "tip",
+                      "impact"
+                    ],
+                    "properties": {
+                      "tip": {
+                        "type": "string"
+                      },
+                      "impact": {
+                        "type": "string",
+                        "description": "high, medium, or low"
+                      }
+                    }
+                  },
+                  "description": "5 profile optimization tips"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "result": "{{ 0a4ebad7-2911-41c5-acb0-c80dd3b96fa9[\"result\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

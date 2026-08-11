@@ -1,0 +1,648 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "2d599a2f-eeaf-42e7-97d6-accb9e958173",
+        "text": {
+          "ops": [
+            {
+              "insert": "Resume Writing Guide & Best Practices"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "bafe038b-85e3-415a-b3f2-ebdddb310831",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Resume Structure & Sections",
+                  "attributes": {
+                    "bold": true
+                  }
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h1",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "ac9e22f5-c273-4f7b-865d-428b6accf1c2",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Contact Information: Full name, phone, email, LinkedIn URL, portfolio link (if applicable), city/state",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "ced923aa-9389-439b-9861-c0db5a1582d1",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Professional Summary: 2-3 sentences highlighting years of experience, key skills, and measurable achievements",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "a4a5f864-fad0-40d7-8219-605d29ce4f6c",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Work Experience: Company name, job title, dates, location, 3-5 bullet points per role using action verbs and metrics",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "5c521cc6-ade8-4332-81ea-99bb0064c929",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Education: Degree, school name, graduation date, GPA if above 3.5, relevant coursework or honors",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "62d4feaa-672c-4241-835c-06cd91452f76",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Skills: Technical skills, tools, certifications, languages — organized by category",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "ab24fc8d-b457-428d-a859-69970ed697c1",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Optional: Projects, Volunteer Work, Publications, Awards, Professional Memberships",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "64a1454f-e530-4a77-9a9d-c835cd7eb692",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Writing Best Practices",
+                  "attributes": {
+                    "bold": true
+                  }
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h1",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "1fde9479-73ca-4e3f-a828-cfe4ec747015",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Use strong action verbs: Led, Developed, Implemented, Achieved, Optimized, Streamlined, Launched",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "e73a1c1f-3cb7-40e7-8e08-4410f2a8278b",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Quantify achievements: Use numbers, percentages, dollar amounts — 'Increased sales by 35%' beats 'Improved sales'",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "0660cfe5-f86d-48ac-9ba5-b9576d967f2e",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Tailor to the job: Mirror keywords from the job description, align experience with requirements",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "2c93fcb5-4a20-4fc1-99bd-b8b23b31b8c8",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Keep it concise: 1 page for under 10 years experience, 2 pages maximum for senior roles",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "97bb48a6-eefc-43f0-8978-0a7dd27ca5d0",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "ATS-friendly: Use standard section headings, avoid tables/columns/graphics, save as PDF",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "b6f33285-c2d9-44be-a0cb-7b2af12a6df2",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Common Mistakes to Avoid",
+                  "attributes": {
+                    "bold": true
+                  }
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h1",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "fc6a732c-68d8-46ff-8371-ac4fbbc0d072",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Generic objective statements — use a targeted professional summary instead",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "309d2b87-463e-4917-8e57-6d5520c910a9",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Listing duties instead of achievements — focus on impact and results, not job descriptions",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "041c1763-025f-4c88-bf03-f0f8197a881c",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Typos and inconsistent formatting — proofread multiple times, use consistent date formats",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "2f090dd7-6fc5-402b-aa07-70f5a4e042c0",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Including irrelevant experience — only include roles from the last 10-15 years that relate to target position",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "5f6e05bb-42d8-44f4-a0ff-15b2500c255f",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Using personal pronouns (I, my, me) — resume bullets should begin with action verbs",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "9435abb9-738b-4937-962b-1656048777dd",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Interview Questions to Gather Resume Info",
+                  "attributes": {
+                    "bold": true
+                  }
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h1",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "9484f836-0b78-4632-81bd-156779cb3fb8",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "What is your full name and preferred contact info (email, phone, city)?",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "9cf71e7d-b1f0-4fd0-86f8-c1f4f48f27b8",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "What role or industry are you targeting? Do you have a specific job posting in mind?",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "6f2a5bfa-3600-47af-b053-d86b10e43169",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Walk me through your work history — what companies, titles, dates, and key accomplishments?",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "8d9d5728-fb3b-404c-b9aa-13e44c65aae5",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "What are your top technical skills, certifications, and tools you use daily?",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "preferences": {
+    "defaultView": "list",
+    "avatar": {
+      "type": "emoji",
+      "value": "📱"
+    }
+  }
+}

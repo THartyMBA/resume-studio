@@ -1,0 +1,1232 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "73d32918-18d4-4fc4-9041-f05efcbb0a99",
+        "text": {
+          "ops": [
+            {
+              "insert": "User Accounts & Tiers"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "551bfec9-ea29-4143-9386-c067678fd390",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Owner (Admin)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@notes": "Owner — full admin access",
+              "@tier": {
+                "type": "Select",
+                "optionId": "tier-admin"
+              },
+              "@usrId": "1378737",
+              "@actSt": {
+                "type": "Select",
+                "optionId": "status-active"
+              },
+              "@aiCr": -1,
+              "@aiBon": 0,
+              "@clMax": 999,
+              "@email": "tom.hartymba@gmail.com",
+              "@hasPT": {
+                "type": "Select",
+                "optionId": "pt-yes"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "text": {
+              "ops": [
+                {
+                  "insert": "zharty11 (Admin)",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@email": "zharty11@gmail.com",
+              "@tier": {
+                "type": "Select",
+                "optionId": "tier-admin"
+              },
+              "@actSt": {
+                "type": "Select",
+                "optionId": "status-active"
+              },
+              "@hasPT": {
+                "type": "Select",
+                "optionId": "pt-yes"
+              },
+              "@aiCr": -1,
+              "@clMax": 999,
+              "@notes": "Second admin account"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "views": {
+      "list": {
+        "id": "list",
+        "type": "list",
+        "rank": "A",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@usrId": {
+            "id": "/attributes/@usrId",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zV"
+          },
+          "/attributes/@actSt": {
+            "id": "/attributes/@actSt",
+            "fieldPath": "/attributes/@actSt",
+            "rank": "zk"
+          },
+          "/attributes/@actDt": {
+            "id": "/attributes/@actDt",
+            "fieldPath": "/attributes/@actDt",
+            "rank": "zs"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zw"
+          },
+          "1b497dce-eb9d-4bcd-aa67-998acfd9e859": {
+            "id": "1b497dce-eb9d-4bcd-aa67-998acfd9e859",
+            "fieldPath": "/attributes/@tier",
+            "rank": "zy"
+          },
+          "35b1eeb3-4412-4f0d-9473-561b3ba3671b": {
+            "id": "35b1eeb3-4412-4f0d-9473-561b3ba3671b",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zz"
+          },
+          "c13d0e90-92dc-4f8b-925e-ee418d925bda": {
+            "id": "c13d0e90-92dc-4f8b-925e-ee418d925bda",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zzV"
+          },
+          "d53a12fb-9d1c-4a81-b57e-ced785e149aa": {
+            "id": "d53a12fb-9d1c-4a81-b57e-ced785e149aa",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zzk"
+          },
+          "b6a480fd-3894-4770-a794-a56cbebfd16a": {
+            "id": "b6a480fd-3894-4770-a794-a56cbebfd16a",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zzs"
+          },
+          "398ecd9b-03fd-493f-a0dc-28591cd59c92": {
+            "id": "398ecd9b-03fd-493f-a0dc-28591cd59c92",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zzw"
+          },
+          "5debc154-6331-4a8c-bf8c-3e4eab2ddf2b": {
+            "id": "5debc154-6331-4a8c-bf8c-3e4eab2ddf2b",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zzy"
+          }
+        }
+      },
+      "board": {
+        "id": "board",
+        "type": "board",
+        "rank": "B",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@usrId": {
+            "id": "/attributes/@usrId",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zV"
+          },
+          "/attributes/@actSt": {
+            "id": "/attributes/@actSt",
+            "fieldPath": "/attributes/@actSt",
+            "rank": "zk"
+          },
+          "/attributes/@actDt": {
+            "id": "/attributes/@actDt",
+            "fieldPath": "/attributes/@actDt",
+            "rank": "zs"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zw"
+          },
+          "35d055a5-a18d-4eb8-ab3f-ae044d4cae28": {
+            "id": "35d055a5-a18d-4eb8-ab3f-ae044d4cae28",
+            "fieldPath": "/attributes/@tier",
+            "rank": "zy"
+          },
+          "b3ecd9cb-19e8-4f6c-82f8-5249e505e1ff": {
+            "id": "b3ecd9cb-19e8-4f6c-82f8-5249e505e1ff",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zz"
+          },
+          "b2a3d8c4-5290-45a2-b39e-ac18d0d58f75": {
+            "id": "b2a3d8c4-5290-45a2-b39e-ac18d0d58f75",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zzV"
+          },
+          "e999571f-2114-45e8-b73d-0b3a4b5d0412": {
+            "id": "e999571f-2114-45e8-b73d-0b3a4b5d0412",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zzk"
+          },
+          "a5af7e4d-eae2-4cbf-8eae-a15b631e6c3f": {
+            "id": "a5af7e4d-eae2-4cbf-8eae-a15b631e6c3f",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zzs"
+          },
+          "a2cbd034-046f-42d5-9a35-0956657881dc": {
+            "id": "a2cbd034-046f-42d5-9a35-0956657881dc",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zzw"
+          },
+          "35e4ac0d-165c-453f-9782-046d7375ac11": {
+            "id": "35e4ac0d-165c-453f-9782-046d7375ac11",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zzy"
+          }
+        }
+      },
+      "mindmap": {
+        "id": "mindmap",
+        "type": "mindmap",
+        "rank": "D",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@usrId": {
+            "id": "/attributes/@usrId",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zV"
+          },
+          "/attributes/@actSt": {
+            "id": "/attributes/@actSt",
+            "fieldPath": "/attributes/@actSt",
+            "rank": "zk"
+          },
+          "/attributes/@actDt": {
+            "id": "/attributes/@actDt",
+            "fieldPath": "/attributes/@actDt",
+            "rank": "zs"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zw"
+          },
+          "878591c5-71d7-471f-89de-ba62d21a6e5b": {
+            "id": "878591c5-71d7-471f-89de-ba62d21a6e5b",
+            "fieldPath": "/attributes/@tier",
+            "rank": "zy"
+          },
+          "3d83d1b6-3d1d-4ec4-9a21-3f4908443814": {
+            "id": "3d83d1b6-3d1d-4ec4-9a21-3f4908443814",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zz"
+          },
+          "f494964f-06b9-4057-86fc-16ffe488dbe2": {
+            "id": "f494964f-06b9-4057-86fc-16ffe488dbe2",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zzV"
+          },
+          "1a50be6a-695c-4902-a499-f924a3aeb2d2": {
+            "id": "1a50be6a-695c-4902-a499-f924a3aeb2d2",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zzk"
+          },
+          "0369fd4f-ec78-4bb4-981e-44cc1a680faa": {
+            "id": "0369fd4f-ec78-4bb4-981e-44cc1a680faa",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zzs"
+          },
+          "a4f8269f-21bb-4ec0-9696-5246cf9cd152": {
+            "id": "a4f8269f-21bb-4ec0-9696-5246cf9cd152",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zzw"
+          },
+          "079250c9-3644-4b5e-a60b-bb0f0addd78b": {
+            "id": "079250c9-3644-4b5e-a60b-bb0f0addd78b",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zzy"
+          }
+        }
+      },
+      "orgchart": {
+        "id": "orgchart",
+        "type": "orgchart",
+        "rank": "E",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@usrId": {
+            "id": "/attributes/@usrId",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zV"
+          },
+          "/attributes/@actSt": {
+            "id": "/attributes/@actSt",
+            "fieldPath": "/attributes/@actSt",
+            "rank": "zk"
+          },
+          "/attributes/@actDt": {
+            "id": "/attributes/@actDt",
+            "fieldPath": "/attributes/@actDt",
+            "rank": "zs"
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zw"
+          },
+          "48019e3c-35b3-405b-95bf-9baf1555940e": {
+            "id": "48019e3c-35b3-405b-95bf-9baf1555940e",
+            "fieldPath": "/attributes/@tier",
+            "rank": "zy"
+          },
+          "92b48975-066f-499d-a1c2-66698108a72f": {
+            "id": "92b48975-066f-499d-a1c2-66698108a72f",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zz"
+          },
+          "7f8e5293-bfe8-408c-b2d1-4f0e44aa41b5": {
+            "id": "7f8e5293-bfe8-408c-b2d1-4f0e44aa41b5",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zzV"
+          },
+          "d24323c6-abc7-4368-a184-f5864ccac3f4": {
+            "id": "d24323c6-abc7-4368-a184-f5864ccac3f4",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zzk"
+          },
+          "41b0b1e2-9e0b-460f-9635-5439a8c8b973": {
+            "id": "41b0b1e2-9e0b-460f-9635-5439a8c8b973",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zzs"
+          },
+          "f0f5c613-e0b8-410d-acbe-5074062f96e7": {
+            "id": "f0f5c613-e0b8-410d-acbe-5074062f96e7",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zzw"
+          },
+          "5b2cdcc1-aab7-4502-b2cc-75adec0de5e7": {
+            "id": "5b2cdcc1-aab7-4502-b2cc-75adec0de5e7",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zzy"
+          }
+        }
+      },
+      "gantt": {
+        "id": "gantt",
+        "type": "gantt",
+        "rank": "F",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F",
+            "hidden": true
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N",
+            "hidden": true
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@usrId": {
+            "id": "/attributes/@usrId",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@actSt": {
+            "id": "/attributes/@actSt",
+            "fieldPath": "/attributes/@actSt",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@actDt": {
+            "id": "/attributes/@actDt",
+            "fieldPath": "/attributes/@actDt",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zw",
+            "hidden": false
+          },
+          "f6869869-4ea7-4a98-805c-83e4a447d8af": {
+            "id": "f6869869-4ea7-4a98-805c-83e4a447d8af",
+            "fieldPath": "/attributes/@tier",
+            "rank": "zy"
+          },
+          "21e42611-fd2d-4a73-9cef-8a1b9b4a1fee": {
+            "id": "21e42611-fd2d-4a73-9cef-8a1b9b4a1fee",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zz"
+          },
+          "61a3d528-4baf-408f-b487-98fc303ac9aa": {
+            "id": "61a3d528-4baf-408f-b487-98fc303ac9aa",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zzV"
+          },
+          "945021e9-bcf1-44d7-abf7-cf2dd21525d9": {
+            "id": "945021e9-bcf1-44d7-abf7-cf2dd21525d9",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zzk"
+          },
+          "22d3915c-05c4-4927-80d5-77c83a9d8539": {
+            "id": "22d3915c-05c4-4927-80d5-77c83a9d8539",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zzs"
+          },
+          "726f7e19-3696-4d02-94b7-1f4c04edaed5": {
+            "id": "726f7e19-3696-4d02-94b7-1f4c04edaed5",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zzw"
+          },
+          "ae1854c4-38aa-45e2-9904-ed29737ec5b8": {
+            "id": "ae1854c4-38aa-45e2-9904-ed29737ec5b8",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zzy"
+          }
+        }
+      },
+      "table": {
+        "id": "table",
+        "type": "table",
+        "rank": "V",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F",
+            "hidden": true
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N",
+            "hidden": true
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@usrId": {
+            "id": "/attributes/@usrId",
+            "fieldPath": "/attributes/@usrId",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@actSt": {
+            "id": "/attributes/@actSt",
+            "fieldPath": "/attributes/@actSt",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@actDt": {
+            "id": "/attributes/@actDt",
+            "fieldPath": "/attributes/@actDt",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@notes": {
+            "id": "/attributes/@notes",
+            "fieldPath": "/attributes/@notes",
+            "rank": "zw",
+            "hidden": false
+          },
+          "0620765e-1782-40be-833d-f924781e670f": {
+            "id": "0620765e-1782-40be-833d-f924781e670f",
+            "fieldPath": "/attributes/@tier",
+            "rank": "zy"
+          },
+          "91e46b80-e609-41e6-adab-e51be3e8eeb0": {
+            "id": "91e46b80-e609-41e6-adab-e51be3e8eeb0",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zz"
+          },
+          "248e2d9b-7b32-4465-81dc-c1f8c742ba25": {
+            "id": "248e2d9b-7b32-4465-81dc-c1f8c742ba25",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zzV"
+          },
+          "8da31350-ac64-4773-9e29-ef0f28ac51a3": {
+            "id": "8da31350-ac64-4773-9e29-ef0f28ac51a3",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zzk"
+          },
+          "86514512-c639-43df-bb34-b4ad1a087a10": {
+            "id": "86514512-c639-43df-bb34-b4ad1a087a10",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zzs"
+          },
+          "c2656eaf-daf8-45a6-84be-33d5fc9820ab": {
+            "id": "c2656eaf-daf8-45a6-84be-33d5fc9820ab",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zzw"
+          },
+          "0694a26f-dcfc-47c7-b66e-eaefd0f380b9": {
+            "id": "0694a26f-dcfc-47c7-b66e-eaefd0f380b9",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zzy"
+          }
+        }
+      },
+      "actionsheet": {
+        "id": "actionsheet",
+        "type": "actionsheet",
+        "rank": "F",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "361cca42-ab03-44d1-a889-e89e5323d5e7": {
+            "id": "361cca42-ab03-44d1-a889-e89e5323d5e7",
+            "fieldPath": "/attributes/@tier",
+            "rank": "z"
+          },
+          "d66f7b2e-41f0-47a5-8564-af90b15c9186": {
+            "id": "d66f7b2e-41f0-47a5-8564-af90b15c9186",
+            "fieldPath": "/attributes/@strCu",
+            "rank": "zV"
+          },
+          "a352ca4f-d58f-44cb-9ddd-1bb59318bb68": {
+            "id": "a352ca4f-d58f-44cb-9ddd-1bb59318bb68",
+            "fieldPath": "/attributes/@strSu",
+            "rank": "zk"
+          },
+          "a8193d1b-2f77-46ba-9368-4e5a1048008b": {
+            "id": "a8193d1b-2f77-46ba-9368-4e5a1048008b",
+            "fieldPath": "/attributes/@hasPT",
+            "rank": "zs"
+          },
+          "f9f6cc95-c7d3-4313-adca-d3ac84b58694": {
+            "id": "f9f6cc95-c7d3-4313-adca-d3ac84b58694",
+            "fieldPath": "/attributes/@aiCr",
+            "rank": "zw"
+          },
+          "696df037-62a0-426a-bd39-b918ff03a0a2": {
+            "id": "696df037-62a0-426a-bd39-b918ff03a0a2",
+            "fieldPath": "/attributes/@aiBon",
+            "rank": "zy"
+          },
+          "70173462-8da6-4184-a6c9-786f2fbbb4fb": {
+            "id": "70173462-8da6-4184-a6c9-786f2fbbb4fb",
+            "fieldPath": "/attributes/@clMax",
+            "rank": "zz"
+          }
+        }
+      }
+    },
+    "fields": {
+      "@notes": {
+        "type": "string",
+        "displayName": "Notes"
+      },
+      "@actDt": {
+        "type": "DateTime",
+        "title": "Activated On"
+      },
+      "@tier": {
+        "type": "Select",
+        "displayName": "Tier",
+        "options": {
+          "tier-admin": {
+            "id": "tier-admin",
+            "name": "Admin",
+            "color": "#ef4444",
+            "rank": "0"
+          },
+          "tier-lifetime": {
+            "id": "tier-lifetime",
+            "name": "Lifetime",
+            "color": "#8b5cf6",
+            "rank": "1"
+          },
+          "tier-monthly": {
+            "id": "tier-monthly",
+            "name": "Monthly Pro",
+            "color": "#3b82f6",
+            "rank": "2"
+          },
+          "tier-agency": {
+            "id": "tier-agency",
+            "name": "Agency",
+            "color": "#f59e0b",
+            "rank": "3"
+          }
+        }
+      },
+      "@strCu": {
+        "type": "string",
+        "displayName": "Stripe Customer ID"
+      },
+      "@usrId": {
+        "type": "string",
+        "displayName": "User Auth ID (sub)"
+      },
+      "@strSu": {
+        "type": "string",
+        "displayName": "Stripe Subscription ID"
+      },
+      "@actSt": {
+        "type": "Select",
+        "displayName": "Status",
+        "options": {
+          "status-active": {
+            "id": "status-active",
+            "name": "Active",
+            "color": "#10b981",
+            "rank": "0"
+          },
+          "status-revoked": {
+            "id": "status-revoked",
+            "name": "Revoked",
+            "color": "#ef4444",
+            "rank": "1"
+          }
+        }
+      },
+      "@aiCr": {
+        "type": "number",
+        "displayName": "AI Credits Remaining",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "decimal"
+        }
+      },
+      "@aiBon": {
+        "type": "number",
+        "displayName": "Bonus AI Credits",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "decimal"
+        }
+      },
+      "@clMax": {
+        "type": "number",
+        "displayName": "Max Clients (Agency)",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "decimal"
+        }
+      },
+      "@email": {
+        "type": "string",
+        "displayName": "Email"
+      },
+      "@hasPT": {
+        "type": "Select",
+        "displayName": "Premium Templates",
+        "options": {
+          "pt-yes": {
+            "id": "pt-yes",
+            "name": "Unlocked",
+            "color": "#10b981",
+            "rank": "0"
+          },
+          "pt-no": {
+            "id": "pt-no",
+            "name": "Locked",
+            "color": "#6b7280",
+            "rank": "1"
+          }
+        }
+      }
+    }
+  },
+  "preferences": {
+    "defaultView": "table",
+    "avatar": {
+      "type": "emoji",
+      "value": "📄"
+    }
+  }
+}

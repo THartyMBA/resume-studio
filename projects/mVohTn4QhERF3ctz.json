@@ -1,0 +1,1161 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "a0608b32-e3e6-4b4f-8922-bb4f21f75137",
+        "text": {
+          "ops": [
+            {
+              "insert": "Resume Profiles"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "b068cde4-dc8c-4562-95f8-2d401399573a",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Sarah Chen",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@tgRol": "Senior Product Manager",
+              "@indst": "Technology / SaaS",
+              "@rStat": {
+                "type": "Select",
+                "optionId": "status-complete"
+              },
+              "@expLv": {
+                "type": "Select",
+                "optionId": "exp-senior"
+              },
+              "@email": "sarah.chen@email.com",
+              "@phone": "(415) 555-0192",
+              "@loctn": "San Francisco, CA",
+              "@crtAt": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-05-01"
+                }
+              }
+            },
+            "children": [
+              {
+                "type": "text",
+                "id": "3e6b2390-5cd0-4f63-9960-6e53c6115e75",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Summary: Results-driven product leader with 8+ years driving B2B SaaS growth",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "160f7e22-c221-4c04-9270-65fe43b5658c",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Skills: Product Strategy, Agile/Scrum, Data Analytics, User Research, Go-to-Market",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "ca6a4b62-bb46-4d5e-a241-091b1c7bc393",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Marcus Rivera",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@tgRol": "Full Stack Developer",
+              "@indst": "FinTech",
+              "@rStat": {
+                "type": "Select",
+                "optionId": "status-in-progress"
+              },
+              "@expLv": {
+                "type": "Select",
+                "optionId": "exp-mid"
+              },
+              "@email": "m.rivera.dev@email.com",
+              "@phone": "(512) 555-0387",
+              "@loctn": "Austin, TX",
+              "@crtAt": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-05-03"
+                }
+              }
+            },
+            "children": [
+              {
+                "type": "text",
+                "id": "c746e3f1-d517-4673-b794-e1b3575fc8e1",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Summary: Full-stack engineer with 5 years building scalable payment systems",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "32e49074-9724-432d-8f11-eeb17e0dbdb0",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Skills: React, Node.js, Python, PostgreSQL, AWS, Docker, CI/CD",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "e4bfe2e8-a83b-46c2-9ffe-80ac53ffb62a",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Emily Nakamura",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@tgRol": "UX Designer",
+              "@indst": "Healthcare Technology",
+              "@rStat": {
+                "type": "Select",
+                "optionId": "status-draft"
+              },
+              "@expLv": {
+                "type": "Select",
+                "optionId": "exp-entry"
+              },
+              "@email": "emily.nak@email.com",
+              "@phone": "(206) 555-0145",
+              "@loctn": "Seattle, WA",
+              "@crtAt": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2026-05-05"
+                }
+              }
+            },
+            "children": [
+              {
+                "type": "text",
+                "id": "90374e26-4dba-45cd-a4dd-7c55a7833dde",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Summary: Creative UX designer passionate about accessible healthcare interfaces",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              },
+              {
+                "type": "text",
+                "id": "44e09558-a4a0-4285-b239-2718aa804cfd",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "Skills: Figma, User Research, Prototyping, WCAG Accessibility, Design Systems",
+                      "attributes": {}
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "bullet",
+                  "children": null
+                },
+                "collapsed": false,
+                "completed": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "views": {
+      "list": {
+        "id": "list",
+        "type": "list",
+        "rank": "A",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@tgRol": {
+            "id": "/attributes/@tgRol",
+            "fieldPath": "/attributes/@tgRol",
+            "rank": "z"
+          },
+          "/attributes/@indst": {
+            "id": "/attributes/@indst",
+            "fieldPath": "/attributes/@indst",
+            "rank": "zV"
+          },
+          "/attributes/@rStat": {
+            "id": "/attributes/@rStat",
+            "fieldPath": "/attributes/@rStat",
+            "rank": "zk"
+          },
+          "/attributes/@expLv": {
+            "id": "/attributes/@expLv",
+            "fieldPath": "/attributes/@expLv",
+            "rank": "zs"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zw"
+          },
+          "/attributes/@phone": {
+            "id": "/attributes/@phone",
+            "fieldPath": "/attributes/@phone",
+            "rank": "zy"
+          },
+          "/attributes/@loctn": {
+            "id": "/attributes/@loctn",
+            "fieldPath": "/attributes/@loctn",
+            "rank": "zz"
+          },
+          "/attributes/@crtAt": {
+            "id": "/attributes/@crtAt",
+            "fieldPath": "/attributes/@crtAt",
+            "rank": "zzV"
+          }
+        }
+      },
+      "board": {
+        "id": "board",
+        "type": "board",
+        "rank": "B",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@tgRol": {
+            "id": "/attributes/@tgRol",
+            "fieldPath": "/attributes/@tgRol",
+            "rank": "z"
+          },
+          "/attributes/@indst": {
+            "id": "/attributes/@indst",
+            "fieldPath": "/attributes/@indst",
+            "rank": "zV"
+          },
+          "/attributes/@rStat": {
+            "id": "/attributes/@rStat",
+            "fieldPath": "/attributes/@rStat",
+            "rank": "zk"
+          },
+          "/attributes/@expLv": {
+            "id": "/attributes/@expLv",
+            "fieldPath": "/attributes/@expLv",
+            "rank": "zs"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zw"
+          },
+          "/attributes/@phone": {
+            "id": "/attributes/@phone",
+            "fieldPath": "/attributes/@phone",
+            "rank": "zy"
+          },
+          "/attributes/@loctn": {
+            "id": "/attributes/@loctn",
+            "fieldPath": "/attributes/@loctn",
+            "rank": "zz"
+          },
+          "/attributes/@crtAt": {
+            "id": "/attributes/@crtAt",
+            "fieldPath": "/attributes/@crtAt",
+            "rank": "zzV"
+          }
+        }
+      },
+      "mindmap": {
+        "id": "mindmap",
+        "type": "mindmap",
+        "rank": "D",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@tgRol": {
+            "id": "/attributes/@tgRol",
+            "fieldPath": "/attributes/@tgRol",
+            "rank": "z"
+          },
+          "/attributes/@indst": {
+            "id": "/attributes/@indst",
+            "fieldPath": "/attributes/@indst",
+            "rank": "zV"
+          },
+          "/attributes/@rStat": {
+            "id": "/attributes/@rStat",
+            "fieldPath": "/attributes/@rStat",
+            "rank": "zk"
+          },
+          "/attributes/@expLv": {
+            "id": "/attributes/@expLv",
+            "fieldPath": "/attributes/@expLv",
+            "rank": "zs"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zw"
+          },
+          "/attributes/@phone": {
+            "id": "/attributes/@phone",
+            "fieldPath": "/attributes/@phone",
+            "rank": "zy"
+          },
+          "/attributes/@loctn": {
+            "id": "/attributes/@loctn",
+            "fieldPath": "/attributes/@loctn",
+            "rank": "zz"
+          },
+          "/attributes/@crtAt": {
+            "id": "/attributes/@crtAt",
+            "fieldPath": "/attributes/@crtAt",
+            "rank": "zzV"
+          }
+        }
+      },
+      "orgchart": {
+        "id": "orgchart",
+        "type": "orgchart",
+        "rank": "E",
+        "displayedFields": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7"
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A"
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V"
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c"
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k"
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s"
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t"
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u"
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF"
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF"
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x"
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y"
+          },
+          "/attributes/@tgRol": {
+            "id": "/attributes/@tgRol",
+            "fieldPath": "/attributes/@tgRol",
+            "rank": "z"
+          },
+          "/attributes/@indst": {
+            "id": "/attributes/@indst",
+            "fieldPath": "/attributes/@indst",
+            "rank": "zV"
+          },
+          "/attributes/@rStat": {
+            "id": "/attributes/@rStat",
+            "fieldPath": "/attributes/@rStat",
+            "rank": "zk"
+          },
+          "/attributes/@expLv": {
+            "id": "/attributes/@expLv",
+            "fieldPath": "/attributes/@expLv",
+            "rank": "zs"
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zw"
+          },
+          "/attributes/@phone": {
+            "id": "/attributes/@phone",
+            "fieldPath": "/attributes/@phone",
+            "rank": "zy"
+          },
+          "/attributes/@loctn": {
+            "id": "/attributes/@loctn",
+            "fieldPath": "/attributes/@loctn",
+            "rank": "zz"
+          },
+          "/attributes/@crtAt": {
+            "id": "/attributes/@crtAt",
+            "fieldPath": "/attributes/@crtAt",
+            "rank": "zzV"
+          }
+        }
+      },
+      "gantt": {
+        "id": "gantt",
+        "type": "gantt",
+        "rank": "F",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F",
+            "hidden": true
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N",
+            "hidden": true
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@tgRol": {
+            "id": "/attributes/@tgRol",
+            "fieldPath": "/attributes/@tgRol",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@indst": {
+            "id": "/attributes/@indst",
+            "fieldPath": "/attributes/@indst",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@rStat": {
+            "id": "/attributes/@rStat",
+            "fieldPath": "/attributes/@rStat",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@expLv": {
+            "id": "/attributes/@expLv",
+            "fieldPath": "/attributes/@expLv",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@phone": {
+            "id": "/attributes/@phone",
+            "fieldPath": "/attributes/@phone",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@loctn": {
+            "id": "/attributes/@loctn",
+            "fieldPath": "/attributes/@loctn",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@crtAt": {
+            "id": "/attributes/@crtAt",
+            "fieldPath": "/attributes/@crtAt",
+            "rank": "zzV",
+            "hidden": false
+          }
+        }
+      },
+      "table": {
+        "id": "table",
+        "type": "table",
+        "rank": "V",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F",
+            "hidden": true
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N",
+            "hidden": true
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@tgRol": {
+            "id": "/attributes/@tgRol",
+            "fieldPath": "/attributes/@tgRol",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@indst": {
+            "id": "/attributes/@indst",
+            "fieldPath": "/attributes/@indst",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@rStat": {
+            "id": "/attributes/@rStat",
+            "fieldPath": "/attributes/@rStat",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@expLv": {
+            "id": "/attributes/@expLv",
+            "fieldPath": "/attributes/@expLv",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@email": {
+            "id": "/attributes/@email",
+            "fieldPath": "/attributes/@email",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@phone": {
+            "id": "/attributes/@phone",
+            "fieldPath": "/attributes/@phone",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@loctn": {
+            "id": "/attributes/@loctn",
+            "fieldPath": "/attributes/@loctn",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@crtAt": {
+            "id": "/attributes/@crtAt",
+            "fieldPath": "/attributes/@crtAt",
+            "rank": "zzV",
+            "hidden": false
+          }
+        }
+      }
+    },
+    "fields": {
+      "@tgRol": {
+        "type": "string",
+        "displayName": "Target Role"
+      },
+      "@indst": {
+        "type": "string",
+        "displayName": "Industry"
+      },
+      "@rStat": {
+        "type": "Select",
+        "displayName": "Status",
+        "options": {
+          "status-draft": {
+            "id": "status-draft",
+            "name": "Draft",
+            "color": "#f59e0b",
+            "rank": "0"
+          },
+          "status-in-progress": {
+            "id": "status-in-progress",
+            "name": "In Progress",
+            "color": "#3b82f6",
+            "rank": "1"
+          },
+          "status-review": {
+            "id": "status-review",
+            "name": "Under Review",
+            "color": "#8b5cf6",
+            "rank": "2"
+          },
+          "status-complete": {
+            "id": "status-complete",
+            "name": "Complete",
+            "color": "#10b981",
+            "rank": "3"
+          }
+        }
+      },
+      "@expLv": {
+        "type": "Select",
+        "displayName": "Experience Level",
+        "options": {
+          "exp-entry": {
+            "id": "exp-entry",
+            "name": "Entry Level",
+            "color": "#6ee7b7",
+            "rank": "0"
+          },
+          "exp-mid": {
+            "id": "exp-mid",
+            "name": "Mid Career",
+            "color": "#60a5fa",
+            "rank": "1"
+          },
+          "exp-senior": {
+            "id": "exp-senior",
+            "name": "Senior",
+            "color": "#a78bfa",
+            "rank": "2"
+          },
+          "exp-exec": {
+            "id": "exp-exec",
+            "name": "Executive",
+            "color": "#f472b6",
+            "rank": "3"
+          }
+        }
+      },
+      "@email": {
+        "type": "string",
+        "displayName": "Email"
+      },
+      "@phone": {
+        "type": "string",
+        "displayName": "Phone"
+      },
+      "@loctn": {
+        "type": "string",
+        "displayName": "Location"
+      },
+      "@crtAt": {
+        "type": "DateTime",
+        "title": "Created At"
+      }
+    }
+  },
+  "preferences": {
+    "defaultView": "table",
+    "avatar": {
+      "type": "emoji",
+      "value": "💻"
+    }
+  }
+}

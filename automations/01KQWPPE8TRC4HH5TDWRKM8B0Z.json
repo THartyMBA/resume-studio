@@ -1,0 +1,168 @@
+{
+  "version": "2",
+  "flowTitle": "Interview Prep Generator",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "resumeText": {
+            "type": "string",
+            "description": "Input for resumeText"
+          },
+          "jobDescription": {
+            "type": "string",
+            "description": "Input for jobDescription"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "09253e40-67a5-41f1-b8f4-67cff9700f51",
+      "valid": true,
+      "displayName": "Generate Interview Questions & STAR Answers",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-openai",
+        "pieceVersion": "1.0.0",
+        "actionName": "ai.categorize",
+        "input": {
+          "input": "You are an expert career coach and interview preparation specialist. Generate comprehensive interview prep based on this resume and job description.\n\nRESUME:\n{{ trigger[\"body\"][\"resumeText\"] }}\n\nJOB DESCRIPTION:\n{{ trigger[\"body\"][\"jobDescription\"] }}\n\nGenerate exactly 10 high-quality interview questions across these categories:\n- behavioral (3-4): Questions about past experiences using STAR format\n- technical (2-3): Role-specific technical knowledge questions\n- situational (2-3): Hypothetical scenario questions\n- role-specific (1-2): Questions specific to this company/role\n\nFor EACH question, provide:\n1. The question itself\n2. Why the interviewer asks it (their intent)\n3. A complete STAR-method answer using real details from the resume:\n   - Situation: Set the context from their actual experience\n   - Task: What was their responsibility\n   - Action: Specific steps they took\n   - Result: Quantifiable outcome when possible\n4. Key points to emphasize\n5. Common mistakes to avoid\n6. A likely follow-up question\n\nAlso provide 5 general preparation tips specific to this role and company.\n\nMake answers specific and personal to the candidate's actual experience. Use real company names, metrics, and achievements from the resume.",
+          "model": "openai/gpt-5.4-mini",
+          "output": {
+            "type": "custom",
+            "schema": {
+              "type": "object",
+              "required": [
+                "questions",
+                "prepTips",
+                "overallReadiness"
+              ],
+              "properties": {
+                "prepTips": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "tip",
+                      "category"
+                    ],
+                    "properties": {
+                      "tip": {
+                        "type": "string"
+                      },
+                      "category": {
+                        "type": "string",
+                        "description": "research, mindset, delivery, or content"
+                      }
+                    }
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "question",
+                      "category",
+                      "difficulty",
+                      "whyAsked",
+                      "starAnswer",
+                      "keyPoints",
+                      "mistakes",
+                      "followUp"
+                    ],
+                    "properties": {
+                      "category": {
+                        "type": "string",
+                        "description": "behavioral, technical, situational, or role-specific"
+                      },
+                      "followUp": {
+                        "type": "string",
+                        "description": "A likely follow-up question"
+                      },
+                      "mistakes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "1-2 common mistakes to avoid"
+                      },
+                      "question": {
+                        "type": "string"
+                      },
+                      "whyAsked": {
+                        "type": "string",
+                        "description": "Why interviewers ask this"
+                      },
+                      "keyPoints": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "2-3 key points to emphasize"
+                      },
+                      "difficulty": {
+                        "type": "string",
+                        "description": "easy, medium, or hard"
+                      },
+                      "starAnswer": {
+                        "type": "object",
+                        "required": [
+                          "situation",
+                          "task",
+                          "action",
+                          "result"
+                        ],
+                        "properties": {
+                          "task": {
+                            "type": "string"
+                          },
+                          "action": {
+                            "type": "string"
+                          },
+                          "result": {
+                            "type": "string"
+                          },
+                          "situation": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "overallReadiness": {
+                  "type": "string",
+                  "description": "A 2-3 sentence assessment of how well-prepared this candidate is for the role based on their resume"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "result": "{{ 09253e40-67a5-41f1-b8f4-67cff9700f51[\"result\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "version": "2",
+  "flowTitle": "Activate Subscription User",
+  "trigger": {
+    "valid": false,
+    "displayName": "When Subscription Created",
+    "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@taskade/automade-piece-stripe",
+      "pieceVersion": "1.0.0",
+      "triggerName": "new_subscription",
+      "input": {}
+    }
+  },
+  "actions": [
+    {
+      "name": "454a1f77-c0b8-4903-934d-4f9c737996db",
+      "valid": false,
+      "displayName": "Add Subscriber to User Accounts",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-taskade",
+        "pieceVersion": "1.0.0",
+        "actionName": "task.create",
+        "input": {
+          "fields": {
+            "@aiCr": {
+              "data": {
+                "value": "-1"
+              },
+              "rank": "7",
+              "fieldId": "@aiCr"
+            },
+            "@tier": {
+              "data": {
+                "value": "tier-monthly"
+              },
+              "rank": "5",
+              "fieldId": "@tier"
+            },
+            "@actSt": {
+              "data": {
+                "value": "status-active"
+              },
+              "rank": "2",
+              "fieldId": "@actSt"
+            },
+            "@email": {
+              "data": {
+                "value": "{{ trigger[\"customer\"] }}"
+              },
+              "rank": "1",
+              "fieldId": "@email"
+            },
+            "@hasPT": {
+              "data": {
+                "value": "pt-no"
+              },
+              "rank": "6",
+              "fieldId": "@hasPT"
+            },
+            "@notes": {
+              "data": {
+                "value": "Subscription {{ trigger[\"id\"] }} — Status: {{ trigger[\"status\"] }}"
+              },
+              "rank": "8",
+              "fieldId": "@notes"
+            },
+            "@strCu": {
+              "data": {
+                "value": "{{ trigger[\"customer\"] }}"
+              },
+              "rank": "3",
+              "fieldId": "@strCu"
+            },
+            "@strSu": {
+              "data": {
+                "value": "{{ trigger[\"id\"] }}"
+              },
+              "rank": "4",
+              "fieldId": "@strSu"
+            },
+            "@usrId": {
+              "data": {
+                "value": "{{ trigger[\"customer\"] }}"
+              },
+              "rank": "0",
+              "fieldId": "@usrId"
+            }
+          },
+          "content": "Subscription {{ trigger[\"id\"] }}",
+          "position": "beforeend",
+          "projectId": {
+            "type": "flow-template-variable-input-type",
+            "id": "46ukZJmeSkHeGfXG"
+          }
+        }
+      }
+    }
+  ],
+  "variables": {
+    "46ukZJmeSkHeGfXG": {
+      "id": "46ukZJmeSkHeGfXG",
+      "rank": "V",
+      "type": "string",
+      "format": "taskade-project-id"
+    }
+  }
+}

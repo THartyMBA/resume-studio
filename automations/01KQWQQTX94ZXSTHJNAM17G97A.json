@@ -1,0 +1,80 @@
+{
+  "version": "2",
+  "flowTitle": "Salary Negotiation Research",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Input for location"
+          },
+          "resumeText": {
+            "type": "string",
+            "description": "Input for resumeText"
+          },
+          "targetRole": {
+            "type": "string",
+            "description": "Input for targetRole"
+          },
+          "yearsExperience": {
+            "type": "string",
+            "description": "Input for yearsExperience"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "362d1006-5aa4-4502-a387-9f1e29bfc1c6",
+      "valid": true,
+      "displayName": "Search Salary Data",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-media",
+        "pieceVersion": "1.0.0",
+        "actionName": "web.search",
+        "input": {
+          "query": "{{ trigger[\"body\"][\"targetRole\"] }} salary range {{ trigger[\"body\"][\"location\"] }} {{ trigger[\"body\"][\"yearsExperience\"] }} years experience 2025 compensation total pay glassdoor levels.fyi"
+        }
+      }
+    },
+    {
+      "name": "dda059c7-cb2e-4096-adfb-f6dd46770a0b",
+      "valid": true,
+      "displayName": "Generate Salary Insights",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-openai",
+        "pieceVersion": "1.0.0",
+        "actionName": "ai.ask",
+        "input": {
+          "input": "SALARY RESEARCH:\n{{ 362d1006-5aa4-4502-a387-9f1e29bfc1c6[\"summary\"] }}\n\nCANDIDATE PROFILE:\nTarget Role: {{ trigger[\"body\"][\"targetRole\"] }}\nLocation: {{ trigger[\"body\"][\"location\"] }}\nExperience: {{ trigger[\"body\"][\"yearsExperience\"] }} years\nResume: {{ trigger[\"body\"][\"resumeText\"] }}",
+          "prompt": "You are a compensation analyst and salary negotiation coach. Analyze the salary research data and candidate profile to produce a comprehensive salary negotiation report.\n\nReturn ONLY valid JSON matching this schema:\n{\n  \"salaryRange\": { \"low\": number, \"median\": number, \"high\": number, \"currency\": \"USD\" },\n  \"totalCompensation\": { \"baseSalary\": string, \"bonus\": string, \"equity\": string, \"benefits\": string },\n  \"marketInsights\": [ { \"title\": string, \"detail\": string, \"trend\": \"up\" | \"stable\" | \"down\" } ],\n  \"negotiationTalkingPoints\": [ { \"category\": string, \"point\": string, \"script\": string, \"impact\": \"high\" | \"medium\" | \"low\" } ],\n  \"counterOfferStrategies\": [ { \"scenario\": string, \"response\": string, \"reasoning\": string } ],\n  \"timingAdvice\": string,\n  \"redFlags\": [ string ],\n  \"confidenceLevel\": \"strong\" | \"moderate\" | \"limited\"\n}\n\nBe data-driven. Use specific dollar amounts. Provide 5-7 talking points and 3-4 counter-offer strategies. Include scripts the candidate can actually say word-for-word."
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "result": "{{ dda059c7-cb2e-4096-adfb-f6dd46770a0b[\"result\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

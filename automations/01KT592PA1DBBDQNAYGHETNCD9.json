@@ -1,0 +1,156 @@
+{
+  "version": "2",
+  "flowTitle": "Create Stripe Checkout Session",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "description": "Input for mode"
+          },
+          "name": {
+            "type": "string",
+            "description": "Input for name"
+          },
+          "plan": {
+            "type": "string",
+            "description": "Input for plan"
+          },
+          "email": {
+            "type": "string",
+            "description": "Input for email"
+          },
+          "price_id": {
+            "type": "string",
+            "description": "Input for price_id"
+          },
+          "user_sub": {
+            "type": "string",
+            "description": "Input for user_sub"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "0bd155b8-1595-45a1-ac21-494ec4fd7e2f",
+      "valid": true,
+      "displayName": "Payment vs Subscription",
+      "type": "BRANCH",
+      "settings": {},
+      "paths": [
+        {
+          "name": "5163fb16-8c70-4006-a0f4-0ec06b93f77f",
+          "valid": true,
+          "displayName": "One-time Payment",
+          "type": "BRANCH_PATH",
+          "settings": {
+            "ruleset": {
+              "type": "CUSTOM",
+              "input": {
+                "type": "or",
+                "value": [
+                  {
+                    "type": "and",
+                    "value": [
+                      {
+                        "condition": "text_matches",
+                        "id": "ff676d8b-d603-4270-a1f2-172bb608c7ef",
+                        "data": "trigger[\"body\"][\"mode\"]",
+                        "comparator": "payment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "actions": [
+            {
+              "name": "dc8b160b-cea3-4c43-9070-047c90850fe6",
+              "valid": false,
+              "displayName": "Create Payment Checkout",
+              "type": "PIECE",
+              "settings": {
+                "pieceName": "@taskade/automade-piece-stripe",
+                "pieceVersion": "1.0.0",
+                "actionName": "createCheckoutSession",
+                "input": {
+                  "mode": "payment",
+                  "metadata": "",
+                  "cancel_url": "https://resume-studio-3499.taskade.app?payment=cancelled",
+                  "line_items": "[{\"price\":\"{{ trigger.body.price_id }}\",\"quantity\":1}]",
+                  "success_url": "https://resume-studio-3499.taskade.app?payment=success&plan={{ trigger.body.plan }}",
+                  "customer_email": "{{ trigger.body.email }}",
+                  "client_reference_id": "{{ trigger.body.user_sub }}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "8ddcfc52-0bff-4b67-b4e9-6f43ad4689db",
+          "valid": true,
+          "displayName": "Subscription",
+          "type": "BRANCH_PATH",
+          "settings": {
+            "ruleset": {
+              "type": "FALLBACK"
+            }
+          },
+          "actions": [
+            {
+              "name": "490e7deb-cba7-46a6-8df0-968c4c34c146",
+              "valid": false,
+              "displayName": "Create Subscription Checkout",
+              "type": "PIECE",
+              "settings": {
+                "pieceName": "@taskade/automade-piece-stripe",
+                "pieceVersion": "1.0.0",
+                "actionName": "createCheckoutSession",
+                "input": {
+                  "mode": "subscription",
+                  "metadata": "",
+                  "cancel_url": "https://resume-studio-3499.taskade.app?payment=cancelled",
+                  "line_items": "[{\"price\":\"{{ trigger.body.price_id }}\",\"quantity\":1}]",
+                  "success_url": "https://resume-studio-3499.taskade.app?payment=success&plan={{ trigger.body.plan }}",
+                  "customer_email": "{{ trigger.body.email }}",
+                  "client_reference_id": "{{ trigger.body.user_sub }}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "checkout_url_payment": "{{ 08f72de7-e363-4b86-8393-9ff85db7b69d[\"url\"] }}"
+            },
+            {
+              "checkout_url_subscription": "{{ 08f72de7-e363-4b86-8393-9ff85db7b69d[\"url\"] }}"
+            },
+            {
+              "session_id": "{{ 08f72de7-e363-4b86-8393-9ff85db7b69d[\"id\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}

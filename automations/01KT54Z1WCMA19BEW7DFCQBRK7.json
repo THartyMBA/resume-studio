@@ -1,0 +1,217 @@
+{
+  "version": "2",
+  "flowTitle": "Skills Gap Analyzer",
+  "trigger": {
+    "valid": true,
+    "type": "WEBHOOK",
+    "settings": {
+      "input": {
+        "type": "object",
+        "properties": {
+          "resumeText": {
+            "type": "string",
+            "description": "Input for resumeText"
+          },
+          "resumeSkills": {
+            "type": "string",
+            "description": "Input for resumeSkills"
+          },
+          "jobDescription": {
+            "type": "string",
+            "description": "Input for jobDescription"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "d6d5bc9f-4c44-4c7b-94a5-2e27ff4c1503",
+      "valid": true,
+      "displayName": "Analyze Skills Gap",
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@taskade/automade-internalpiece-openai",
+        "pieceVersion": "1.0.0",
+        "actionName": "ai.categorize",
+        "input": {
+          "input": "You are an expert career skills analyst. Analyze the gap between this candidate's skills and a job description.\n\nCANDIDATE'S CURRENT SKILLS:\n{{ trigger[\"body\"][\"resumeSkills\"] }}\n\nFULL RESUME:\n{{ trigger[\"body\"][\"resumeText\"] }}\n\nTARGET JOB DESCRIPTION:\n{{ trigger[\"body\"][\"jobDescription\"] }}\n\nPerform a thorough skills gap analysis:\n\n1. MATCHED SKILLS: Skills the candidate already has that match the job (with a relevance rating: critical/important/nice-to-have and a confidence score 0-100 of how well the candidate demonstrates this skill)\n\n2. MISSING SKILLS: Skills required by the job that the candidate lacks (with priority: must-have/should-have/nice-to-have, difficulty to acquire: easy/moderate/hard, and a suggested learning path or action)\n\n3. TRANSFERABLE SKILLS: Skills the candidate has that aren't directly mentioned in the JD but could be valuable (with an explanation of how they transfer)\n\n4. SKILLS TO HIGHLIGHT: Which existing skills should be emphasized more prominently on the resume for this specific role (with suggested wording or bullet point improvements)\n\n5. OVERALL ASSESSMENT: A fit score (0-100), a readiness level (ready/almost-ready/needs-work/significant-gap), and a personalized summary with specific next steps.\n\n6. RECOMMENDED RESUME CHANGES: Specific bullet point or summary rewording suggestions that better highlight relevant skills.\n\nBe specific, actionable, and realistic. Reference actual skills and requirements from the JD.",
+          "model": "openai/gpt-5.4-mini",
+          "output": {
+            "type": "custom",
+            "schema": {
+              "type": "object",
+              "required": [
+                "matchedSkills",
+                "missingSkills",
+                "transferableSkills",
+                "skillsToHighlight",
+                "assessment",
+                "resumeChanges"
+              ],
+              "properties": {
+                "assessment": {
+                  "type": "object",
+                  "required": [
+                    "fitScore",
+                    "readiness",
+                    "summary",
+                    "nextSteps"
+                  ],
+                  "properties": {
+                    "summary": {
+                      "type": "string"
+                    },
+                    "fitScore": {
+                      "type": "number",
+                      "description": "0-100"
+                    },
+                    "nextSteps": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "readiness": {
+                      "type": "string",
+                      "description": "ready, almost-ready, needs-work, or significant-gap"
+                    }
+                  }
+                },
+                "matchedSkills": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "skill",
+                      "relevance",
+                      "confidence"
+                    ],
+                    "properties": {
+                      "skill": {
+                        "type": "string"
+                      },
+                      "relevance": {
+                        "type": "string",
+                        "description": "critical, important, or nice-to-have"
+                      },
+                      "confidence": {
+                        "type": "number",
+                        "description": "0-100 how well the candidate demonstrates this"
+                      }
+                    }
+                  }
+                },
+                "missingSkills": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "skill",
+                      "priority",
+                      "difficulty",
+                      "action"
+                    ],
+                    "properties": {
+                      "skill": {
+                        "type": "string"
+                      },
+                      "action": {
+                        "type": "string",
+                        "description": "How to acquire this skill"
+                      },
+                      "priority": {
+                        "type": "string",
+                        "description": "must-have, should-have, or nice-to-have"
+                      },
+                      "difficulty": {
+                        "type": "string",
+                        "description": "easy, moderate, or hard"
+                      }
+                    }
+                  }
+                },
+                "resumeChanges": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "section",
+                      "current",
+                      "suggested"
+                    ],
+                    "properties": {
+                      "current": {
+                        "type": "string"
+                      },
+                      "section": {
+                        "type": "string"
+                      },
+                      "suggested": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "skillsToHighlight": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "skill",
+                      "suggestion"
+                    ],
+                    "properties": {
+                      "skill": {
+                        "type": "string"
+                      },
+                      "suggestion": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "transferableSkills": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "skill",
+                      "explanation"
+                    ],
+                    "properties": {
+                      "skill": {
+                        "type": "string"
+                      },
+                      "explanation": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "http_response",
+      "body": {
+        "type": "json",
+        "data": {
+          "type": "basic",
+          "payload": [
+            {
+              "result": "{{ d6d5bc9f-4c44-4c7b-94a5-2e27ff4c1503[\"result\"] }}"
+            }
+          ]
+        }
+      },
+      "key": "trigger"
+    }
+  ]
+}
