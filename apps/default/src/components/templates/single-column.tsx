@@ -1,11 +1,11 @@
 import type { ResumeData } from '@/stores/resume-store';
-import { getBaseFontSize, getFont, ContactLine, ExperienceBlock, EducationBlock, SkillPills, SkillsInline } from './shared';
+import { getBaseFontSize, getFont, ContactLine, ExperienceBlock, EducationBlock, SkillPills, SkillsInline, RESUME_TEXT_COLOR } from './shared';
 import type { CSSProperties } from 'react';
 
 interface Props { resume: ResumeData }
 
 export function makeSectionStyle(accent: string, variant: 'underline' | 'bg' | 'side' | 'dot' | 'thin' | 'thick' | 'none', fontSize: number): CSSProperties {
-  const base: CSSProperties = { fontSize: `${fontSize + 2}px`, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.2px', marginTop: '16px', marginBottom: '8px', color: '#1a1a1a' };
+  const base: CSSProperties = { fontSize: `${fontSize + 2}px`, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.2px', marginTop: '16px', marginBottom: '8px', color: RESUME_TEXT_COLOR };
   if (variant === 'underline') return { ...base, borderBottom: `2px solid ${accent}`, paddingBottom: '3px' };
   if (variant === 'bg') return { ...base, backgroundColor: `${accent}12`, padding: '4px 8px', borderLeft: `3px solid ${accent}`, color: accent };
   if (variant === 'side') return { ...base, borderLeft: `4px solid ${accent}`, paddingLeft: '10px', color: accent };
@@ -18,7 +18,7 @@ export function Sections({ resume, sectionStyle }: Props & { sectionStyle: CSSPr
   const bfs = getBaseFontSize(resume.fontSize);
   const a = resume.accentColor;
   return (<>
-    {resume.summary && <div><h2 style={sectionStyle}>Professional Summary</h2><p style={{ fontSize: `${bfs}px`, color: '#444', lineHeight: '1.6' }}>{resume.summary}</p></div>}
+    {resume.summary && <div><h2 style={sectionStyle}>Professional Summary</h2><p style={{ fontSize: `${bfs}px`, color: RESUME_TEXT_COLOR, lineHeight: '1.6' }}>{resume.summary}</p></div>}
     {resume.experience.length > 0 && <div><h2 style={sectionStyle}>Work Experience</h2>{resume.experience.map(e => <ExperienceBlock key={e.id} exp={e} accent={a} baseFontSize={bfs} />)}</div>}
     {resume.education.length > 0 && <div><h2 style={sectionStyle}>Education</h2>{resume.education.map(e => <EducationBlock key={e.id} edu={e} baseFontSize={bfs} />)}</div>}
     {resume.skills.length > 0 && <div><h2 style={sectionStyle}>Skills</h2><SkillPills skills={resume.skills} accent={a} baseFontSize={bfs} /></div>}
@@ -26,7 +26,7 @@ export function Sections({ resume, sectionStyle }: Props & { sectionStyle: CSSPr
 }
 
 function Body({ resume, children, p }: Props & { children: React.ReactNode; p?: string }) {
-  return <div style={{ padding: p || '24px 44px 36px', fontFamily: getFont(resume), color: '#1a1a1a', fontSize: `${getBaseFontSize(resume.fontSize)}px`, lineHeight: '1.5' }}>{children}</div>;
+  return <div style={{ padding: p || '24px 44px 36px', fontFamily: getFont(resume), color: RESUME_TEXT_COLOR, fontSize: `${getBaseFontSize(resume.fontSize)}px`, lineHeight: '1.5' }}>{children}</div>;
 }
 
 export function ModernTemplate({ resume }: Props) {
@@ -41,7 +41,7 @@ export function ClassicTemplate({ resume }: Props) {
 
 export function MinimalTemplate({ resume }: Props) {
   const a = resume.accentColor, bfs = getBaseFontSize(resume.fontSize);
-  return (<div style={{ fontFamily: getFont(resume), padding: '40px 48px' }}><h1 style={{ fontSize: '22px', fontWeight: 400, letterSpacing: '3px', textTransform: 'uppercase', color: '#333', margin: 0 }}>{resume.contact.fullName || 'Your Name'}</h1><div style={{ marginTop: '6px' }}><ContactLine resume={resume} separator="•" /></div>{resume.summary && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Summary</h2><p style={{ fontSize: `${bfs}px`, color: '#555', lineHeight: '1.7' }}>{resume.summary}</p></>}{resume.experience.length > 0 && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Experience</h2>{resume.experience.map(e => <ExperienceBlock key={e.id} exp={e} accent={a} baseFontSize={bfs} />)}</>}{resume.education.length > 0 && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Education</h2>{resume.education.map(e => <EducationBlock key={e.id} edu={e} baseFontSize={bfs} />)}</>}{resume.skills.length > 0 && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Skills</h2><SkillsInline skills={resume.skills} baseFontSize={bfs} /></>}</div>);
+  return (<div style={{ fontFamily: getFont(resume), padding: '40px 48px' }}><h1 style={{ fontSize: '22px', fontWeight: 400, letterSpacing: '3px', textTransform: 'uppercase', color: RESUME_TEXT_COLOR, margin: 0 }}>{resume.contact.fullName || 'Your Name'}</h1><div style={{ marginTop: '6px' }}><ContactLine resume={resume} separator="•" /></div>{resume.summary && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Summary</h2><p style={{ fontSize: `${bfs}px`, color: RESUME_TEXT_COLOR, lineHeight: '1.7' }}>{resume.summary}</p></>}{resume.experience.length > 0 && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Experience</h2>{resume.experience.map(e => <ExperienceBlock key={e.id} exp={e} accent={a} baseFontSize={bfs} />)}</>}{resume.education.length > 0 && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Education</h2>{resume.education.map(e => <EducationBlock key={e.id} edu={e} baseFontSize={bfs} />)}</>}{resume.skills.length > 0 && <><h2 style={makeSectionStyle(a, 'none', bfs)}>Skills</h2><SkillsInline skills={resume.skills} baseFontSize={bfs} /></>}</div>);
 }
 
 export function ExecutiveTemplate({ resume }: Props) {
@@ -66,5 +66,5 @@ export function InkTemplate({ resume }: Props) {
 
 export function NeonTemplate({ resume }: Props) {
   const a = resume.accentColor, bfs = getBaseFontSize(resume.fontSize);
-  return (<div style={{ fontFamily: getFont(resume), padding: '36px 44px', borderTop: `4px solid ${a}` }}><h1 style={{ fontSize: '28px', fontWeight: 800, color: '#1a1a1a', margin: 0 }}>{resume.contact.fullName || 'Your Name'}</h1><div style={{ height: '2px', background: `linear-gradient(90deg, ${a}, transparent)`, marginTop: '8px', marginBottom: '4px' }} /><ContactLine resume={resume} color={a} separator="•" /><Sections resume={resume} sectionStyle={{ ...makeSectionStyle(a, 'side', bfs), borderLeftColor: a, color: a }} /></div>);
+  return (<div style={{ fontFamily: getFont(resume), padding: '36px 44px', borderTop: `4px solid ${a}` }}><h1 style={{ fontSize: '28px', fontWeight: 800, color: RESUME_TEXT_COLOR, margin: 0 }}>{resume.contact.fullName || 'Your Name'}</h1><div style={{ height: '2px', background: `linear-gradient(90deg, ${a}, transparent)`, marginTop: '8px', marginBottom: '4px' }} /><ContactLine resume={resume} color={a} separator="•" /><Sections resume={resume} sectionStyle={{ ...makeSectionStyle(a, 'side', bfs), borderLeftColor: a, color: a }} /></div>);
 }

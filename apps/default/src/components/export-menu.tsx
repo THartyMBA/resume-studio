@@ -2,13 +2,12 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useResumeStore } from '@/stores/resume-store';
 import {
   exportPlainText,
-  exportDocx,
   exportJsonBackup,
   readJsonBackup,
 } from '@/lib/resume-export';
 import {
   Download, ChevronDown, FileText, FileType, FileCode, Upload,
-  Printer, Check, AlertCircle, FolderArchive,
+  Check, AlertCircle, FolderArchive,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -16,10 +15,11 @@ import { toast } from 'sonner';
 
 interface ExportMenuProps {
   onExportPDF: () => Promise<void>;
+  onExportWord: () => Promise<void>;
   disabled?: boolean;
 }
 
-export function ExportMenu({ onExportPDF, disabled }: ExportMenuProps) {
+export function ExportMenu({ onExportPDF, onExportWord, disabled }: ExportMenuProps) {
   const { resume, versions, setResume } = useResumeStore();
   const [open, setOpen] = useState(false);
   const [exporting, setExporting] = useState<string | null>(null);
@@ -52,7 +52,7 @@ export function ExportMenu({ onExportPDF, disabled }: ExportMenuProps) {
           await onExportPDF();
           break;
         case 'docx':
-          exportDocx(resume);
+          await onExportWord();
           break;
         case 'txt':
           exportPlainText(resume);
@@ -69,7 +69,7 @@ export function ExportMenu({ onExportPDF, disabled }: ExportMenuProps) {
       setExporting(null);
       setOpen(false);
     }
-  }, [resume, versions, onExportPDF]);
+  }, [resume, versions, onExportPDF, onExportWord]);
 
   const handleImport = useCallback(async function (e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -104,9 +104,9 @@ export function ExportMenu({ onExportPDF, disabled }: ExportMenuProps) {
   const formats = [
     {
       id: 'pdf',
-      icon: Printer,
+      icon: Download,
       label: 'PDF',
-      desc: 'Print-ready document',
+      desc: 'Direct download with template styling',
       color: 'text-red-500',
       bg: 'group-hover:bg-red-500/10',
     },
@@ -114,7 +114,7 @@ export function ExportMenu({ onExportPDF, disabled }: ExportMenuProps) {
       id: 'docx',
       icon: FileType,
       label: 'Word (.doc)',
-      desc: 'Editable document for MS Word',
+      desc: 'Editable document with template styling',
       color: 'text-blue-500',
       bg: 'group-hover:bg-blue-500/10',
     },

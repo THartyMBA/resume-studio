@@ -61,6 +61,7 @@ export interface ResumeData {
   skills: string[];
   template: TemplateId;
   accentColor: string;
+  textColor: string;
   fontFamily: FontFamily;
   fontSize: 'sm' | 'md' | 'lg';
 }
@@ -313,6 +314,7 @@ const defaultResume: ResumeData = {
   skills: [],
   template: 'modern',
   accentColor: '#2563eb',
+  textColor: '#374151',
   fontFamily: 'system',
   fontSize: 'md',
 };
@@ -412,27 +414,32 @@ export const useResumeStore = create<ResumeStore>((set) => ({
       const trimmed = line.trim();
       if (!trimmed) continue;
 
-      const upperLine = trimmed.toUpperCase();
+      const heading = trimmed
+        .replace(/^#{1,6}\s*/, '')
+        .replace(/^\*\*(.*?)\*\*$/, '$1')
+        .replace(/:\s*$/, '')
+        .trim()
+        .toUpperCase();
 
-      if (upperLine.includes('PROFESSIONAL SUMMARY') || upperLine.includes('SUMMARY') && upperLine.length < 30) {
+      if (heading === 'PROFESSIONAL SUMMARY' || heading === 'SUMMARY' || heading === 'PROFILE') {
         currentSection = 'summary';
         continue;
       }
-      if (upperLine.includes('WORK EXPERIENCE') || upperLine.includes('EXPERIENCE') && upperLine.length < 30) {
+      if (heading === 'WORK EXPERIENCE' || heading === 'PROFESSIONAL EXPERIENCE' || heading === 'EXPERIENCE') {
         currentSection = 'experience';
         continue;
       }
-      if (upperLine.includes('EDUCATION')) {
+      if (heading === 'EDUCATION') {
         currentSection = 'education';
         continue;
       }
-      if (upperLine.includes('SKILLS') || upperLine.includes('TECHNICAL SKILLS')) {
+      if (heading === 'SKILLS' || heading === 'TECHNICAL SKILLS' || heading === 'CORE SKILLS') {
         currentSection = 'skills';
         continue;
       }
 
-      if (currentSection === '' && !contact.fullName && !trimmed.startsWith('•') && !trimmed.startsWith('-')) {
-        if (!trimmed.includes('|') && !trimmed.includes('@') && trimmed.length < 60) {
+      if (currentSection === '' && !trimmed.startsWith('•') && !trimmed.startsWith('-')) {
+        if (!contact.fullName && !trimmed.includes('|') && !trimmed.includes('@') && trimmed.length < 60) {
           contact.fullName = trimmed.replace(/[#*]/g, '').trim();
           continue;
         }

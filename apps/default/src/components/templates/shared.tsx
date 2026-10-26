@@ -2,6 +2,12 @@ import type { ResumeData, ResumeExperience, ResumeEducation } from '@/stores/res
 import { getFontCSS } from '@/lib/template-registry';
 import type { CSSProperties } from 'react';
 
+export const RESUME_TEXT_COLOR = 'var(--resume-text-color, #374151)';
+
+export function getTextColor(resume: ResumeData) {
+  return /^#[0-9a-fA-F]{6}$/.test(resume.textColor || '') ? resume.textColor : '#374151';
+}
+
 export function getBaseFontSize(size: 'sm' | 'md' | 'lg') {
   return size === 'sm' ? 10 : size === 'lg' ? 12 : 11;
 }
@@ -19,7 +25,7 @@ export function ContactLine({ resume, color, separator = '|' }: { resume: Resume
     resume.contact.portfolio,
   ].filter(Boolean);
   return (
-    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', fontSize: `${getBaseFontSize(resume.fontSize) - 1}px`, color: color || '#666' }}>
+    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', fontSize: `${getBaseFontSize(resume.fontSize) - 1}px`, color: color || RESUME_TEXT_COLOR }}>
       {items.map((item, i) => (
         <span key={i}>{i > 0 ? ` ${separator} ` : ''}{item}</span>
       ))}
@@ -37,7 +43,7 @@ export function ContactStack({ resume, color }: { resume: ResumeData; color?: st
   ].filter(Boolean);
   const sz = getBaseFontSize(resume.fontSize) - 1;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', fontSize: `${sz}px`, color: color || '#999' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', fontSize: `${sz}px`, color: color || RESUME_TEXT_COLOR }}>
       {items.map((item, i) => <span key={i}>{item}</span>)}
     </div>
   );
@@ -54,17 +60,17 @@ export function ExperienceBlock({ exp, accent, baseFontSize }: { exp: ResumeExpe
         <div>
           <strong style={{ fontSize: `${baseFontSize + 1}px` }}>{exp.title}</strong>
           {exp.company && <span style={{ color: accent, fontWeight: 600 }}> | {exp.company}</span>}
-          {exp.location && <span style={{ color: '#888' }}> — {exp.location}</span>}
+          {exp.location && <span style={{ color: RESUME_TEXT_COLOR }}> — {exp.location}</span>}
         </div>
         {(exp.startDate || exp.endDate) && (
-          <span style={{ fontSize: `${baseFontSize - 1}px`, color: '#888', whiteSpace: 'nowrap' }}>
+          <span style={{ fontSize: `${baseFontSize - 1}px`, color: RESUME_TEXT_COLOR, whiteSpace: 'nowrap' }}>
             {exp.startDate} – {exp.endDate}
           </span>
         )}
       </div>
       <ul style={{ paddingLeft: '16px', marginTop: '3px', listStyleType: 'disc' }}>
         {exp.bullets.map((b, i) => (
-          <li key={i} style={{ fontSize: `${baseFontSize}px`, color: '#444', marginBottom: '1px', lineHeight: '1.5' }}>{b}</li>
+          <li key={i} style={{ fontSize: `${baseFontSize}px`, color: RESUME_TEXT_COLOR, marginBottom: '1px', lineHeight: '1.5' }}>{b}</li>
         ))}
       </ul>
     </div>
@@ -75,9 +81,9 @@ export function EducationBlock({ edu, baseFontSize }: { edu: ResumeEducation; ba
   return (
     <div style={{ marginBottom: '6px' }}>
       <strong style={{ fontSize: `${baseFontSize + 1}px` }}>{edu.degree}</strong>
-      {edu.school && <span style={{ color: '#666' }}> | {edu.school}</span>}
-      {edu.graduationYear && <span style={{ color: '#888' }}> | {edu.graduationYear}</span>}
-      {edu.details && <p style={{ fontSize: `${baseFontSize - 1}px`, color: '#888', marginTop: '1px' }}>{edu.details}</p>}
+      {edu.school && <span style={{ color: RESUME_TEXT_COLOR }}> | {edu.school}</span>}
+      {edu.graduationYear && <span style={{ color: RESUME_TEXT_COLOR }}> | {edu.graduationYear}</span>}
+      {edu.details && <p style={{ fontSize: `${baseFontSize - 1}px`, color: RESUME_TEXT_COLOR, marginTop: '1px' }}>{edu.details}</p>}
     </div>
   );
 }
@@ -97,7 +103,7 @@ export function SkillPills({ skills, accent, baseFontSize }: { skills: string[];
 
 export function SkillsInline({ skills, baseFontSize, color }: { skills: string[]; baseFontSize: number; color?: string }) {
   return (
-    <p style={{ fontSize: `${baseFontSize}px`, color: color || '#444', lineHeight: '1.6' }}>
+    <p style={{ fontSize: `${baseFontSize}px`, color: color || RESUME_TEXT_COLOR, lineHeight: '1.6' }}>
       {skills.join(' • ')}
     </p>
   );

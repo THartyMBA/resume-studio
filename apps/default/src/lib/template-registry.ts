@@ -86,6 +86,14 @@ export const ACCENT_COLORS = [
   '#1e40af','#1e3a5f','#4338ca','#7e22ce','#92400e','#78350f',
 ];
 
+// Deliberately limited to shades that remain readable against the white and
+// near-white template surfaces. Accent colors can still be bright; body copy
+// should not silently inherit an inaccessible accent.
+export const TEXT_COLORS = [
+  '#111827','#1f2937','#374151','#334155','#1e293b','#0f172a',
+  '#1e3a5f','#312e81','#4c1d95','#064e3b','#7f1d1d','#78350f',
+];
+
 export const FONT_SIZES: { id: 'sm' | 'md' | 'lg'; label: string; base: number }[] = [
   { id: 'sm', label: 'Compact', base: 10 },
   { id: 'md', label: 'Standard', base: 11 },

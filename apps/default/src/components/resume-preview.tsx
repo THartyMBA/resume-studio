@@ -2,8 +2,9 @@ import { useRef, useState } from 'react';
 import { useResumeStore } from '@/stores/resume-store';
 import { ResumeTemplate } from '@/components/templates';
 import { TemplateGallery } from '@/components/template-gallery';
-import { ACCENT_COLORS, FONT_OPTIONS, FONT_SIZES, getTemplateById } from '@/lib/template-registry';
+import { ACCENT_COLORS, TEXT_COLORS, FONT_OPTIONS, FONT_SIZES, getTemplateById } from '@/lib/template-registry';
 import { ExportMenu } from '@/components/export-menu';
+import { exportPdf, exportWord } from '@/lib/resume-export';
 import { Palette, Type, FileText, ChevronDown, ALargeSmall } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -22,12 +23,17 @@ export function ResumePreview() {
     setExporting(true);
     try {
       const el = previewRef.current;
-      if (!el) return;
-      const printWindow = window.open('', '_blank');
-      if (!printWindow) return;
-      printWindow.document.write(`<!DOCTYPE html><html><head><title>${resume.contact.fullName || 'Resume'}</title><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}@page{margin:0.4in;size:letter}body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a1a;line-height:1.5;font-size:11px}h1,h2{margin:0}ul{padding-left:16px}li{margin-bottom:1px}</style></head><body>${el.innerHTML}</body></html>`);
-      printWindow.document.close();
-      setTimeout(() => { printWindow.print(); printWindow.close(); }, 300);
+      if (!el) throw new Error('The resume preview is not ready.');
+      await exportPdf(resume, el);
+    } finally { setExporting(false); }
+  };
+
+  const handleExportWord = async () => {
+    setExporting(true);
+    try {
+      const el = previewRef.current;
+      if (!el) throw new Error('The resume preview is not ready.');
+      await exportWord(resume, el);
     } finally { setExporting(false); }
   };
 
@@ -50,7 +56,10 @@ export function ResumePreview() {
         {/* Color Picker */}
         <div className="relative">
           <button onClick={() => { setShowColors(!showColors); setShowFonts(false); }} className="flex items-center gap-1 px-2 py-1 text-xs rounded-lg hover:bg-muted transition-all">
-            <div className="size-4 rounded-full border border-border/50" style={{ backgroundColor: resume.accentColor }} />
+            <div className="flex -space-x-1" title="Accent and text colors">
+              <div className="size-4 rounded-full border border-border/50" style={{ backgroundColor: resume.accentColor }} />
+              <div className="size-4 rounded-full border border-border/50" style={{ backgroundColor: resume.textColor || '#374151' }} />
+            </div>
             <Palette className="size-3 text-muted-foreground" />
             <ChevronDown className="size-2.5 text-muted-foreground" />
           </button>
@@ -63,6 +72,17 @@ export function ResumePreview() {
                     className={cn('size-7 rounded-full border-2 transition-all hover:scale-110', resume.accentColor === c ? 'border-foreground scale-110' : 'border-transparent')}
                     style={{ backgroundColor: c }} />
                 ))}
+              </div>
+              <div className="border-t border-border/50 mt-3 pt-3">
+                <p className="text-[10px] text-muted-foreground font-medium mb-2">Body &amp; Secondary Text</p>
+                <div className="grid grid-cols-6 gap-1.5">
+                  {TEXT_COLORS.map(c => (
+                    <button key={c} onClick={() => { setResume({ textColor: c }); setShowColors(false); }}
+                      aria-label={`Set body text color to ${c}`}
+                      className={cn('size-7 rounded-full border-2 transition-all hover:scale-110', (resume.textColor || '#374151') === c ? 'border-foreground scale-110' : 'border-transparent')}
+                      style={{ backgroundColor: c }} />
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -101,7 +121,7 @@ export function ResumePreview() {
 
         <div className="flex-1" />
 
-        <ExportMenu onExportPDF={handleExportPDF} disabled={!hasContent} />
+        <ExportMenu onExportPDF={handleExportPDF} onExportWord={handleExportWord} disabled={!hasContent || exporting} />
       </div>
 
       {/* Preview Area */}

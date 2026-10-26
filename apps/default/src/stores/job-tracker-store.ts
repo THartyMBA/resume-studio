@@ -94,12 +94,35 @@ function jobToPayload(job: Partial<Omit<JobApplication, 'id'>>) {
   return p;
 }
 
+// A page mount, dashboard mount, focus refresh, and client hydration can all
+// request the tracker at once. Never allow a response that began before (or
+// during) a mutation to replace the optimistic/authoritative mutation result.
+let fetchRequest = 0;
+let mutationRevision = 0;
+let mutationsInFlight = 0;
+
+function beginMutation() {
+  mutationsInFlight += 1;
+  mutationRevision += 1;
+  fetchRequest += 1;
+}
+
+function finishMutation(get: () => JobTrackerStore) {
+  mutationsInFlight = Math.max(0, mutationsInFlight - 1);
+  mutationRevision += 1;
+  fetchRequest += 1;
+  if (mutationsInFlight === 0) void get().fetchJobs();
+}
+
 export const useJobTrackerStore = create<JobTrackerStore>((set, get) => ({
   jobs: [],
   loading: false,
   error: null,
 
   fetchJobs: async () => {
+    if (mutationsInFlight > 0) return;
+    const requestId = ++fetchRequest;
+    const revision = mutationRevision;
     set({ loading: true, error: null });
     try {
       const userId = getCurrentUserId();
@@ -110,13 +133,16 @@ export const useJobTrackerStore = create<JobTrackerStore>((set, get) => ({
         ? nodes.filter((n) => getNodeUserId(n) === userId)
         : nodes;
       const jobs = userNodes.map(parseNode).filter(Boolean) as JobApplication[];
+      if (requestId !== fetchRequest || revision !== mutationRevision || mutationsInFlight > 0) return;
       set({ jobs, loading: false });
     } catch (e: any) {
+      if (requestId !== fetchRequest || revision !== mutationRevision || mutationsInFlight > 0) return;
       set({ error: e?.message || 'Failed to fetch', loading: false });
     }
   },
 
   addJob: async (job) => {
+    beginMutation();
     const tempId = uuid();
     const newJob: JobApplication = { ...job, id: tempId };
     set((s) => ({ jobs: [...s.jobs, newJob] }));
@@ -133,10 +159,12 @@ export const useJobTrackerStore = create<JobTrackerStore>((set, get) => ({
       set((s) => ({ jobs: s.jobs.map((j) => j.id === tempId ? { ...j, id: realId } : j) }));
     } catch (e: any) {
       set((s) => ({ jobs: s.jobs.filter((j) => j.id !== tempId), error: e?.message || 'Failed to add' }));
-    }
+    } finally { finishMutation(get); }
   },
 
   updateJob: async (id, updates) => {
+    beginMutation();
+    const prev = get().jobs;
     set((s) => ({ jobs: s.jobs.map((j) => j.id === id ? { ...j, ...updates } : j) }));
     try {
       const payload: Record<string, any> = jobToPayload(updates);
@@ -146,28 +174,29 @@ export const useJobTrackerStore = create<JobTrackerStore>((set, get) => ({
       }
       await axios.patch(`${API_BASE}/${id}`, payload);
     } catch (e: any) {
-      set({ error: e?.message || 'Failed to update' });
-      get().fetchJobs();
-    }
+      set({ jobs: prev, error: e?.message || 'Failed to update' });
+    } finally { finishMutation(get); }
   },
 
   deleteJob: async (id) => {
+    beginMutation();
     const prev = get().jobs;
     set((s) => ({ jobs: s.jobs.filter((j) => j.id !== id) }));
     try {
       await axios.delete(`${API_BASE}/${id}`);
     } catch (e: any) {
       set({ jobs: prev, error: e?.message || 'Failed to delete' });
-    }
+    } finally { finishMutation(get); }
   },
 
   moveJob: async (id, newStage) => {
+    beginMutation();
     const prev = get().jobs;
     set((s) => ({ jobs: s.jobs.map((j) => j.id === id ? { ...j, stage: newStage } : j) }));
     try {
       await axios.patch(`${API_BASE}/${id}`, { '/attributes/@stage': STAGE_TO_OPTION[newStage] });
     } catch (e: any) {
       set({ jobs: prev, error: e?.message || 'Failed to move' });
-    }
+    } finally { finishMutation(get); }
   },
 }));

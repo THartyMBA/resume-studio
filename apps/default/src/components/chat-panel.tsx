@@ -112,25 +112,15 @@ function ActiveChat({ chat }: { chat: ReturnType<typeof createAgentChat> }) {
     }
   };
 
-  // Watch for resume-like content in assistant messages and try to parse
+  // Only an explicit, resume-only artifact may update the structured document.
+  // Ordinary coaching messages often contain headings while discussing examples;
+  // importing those messages polluted summaries and skills with chat prose.
   useEffect(() => {
     if (messages.length === 0) return;
     const lastMsg = messages[messages.length - 1];
     if (lastMsg.role !== 'assistant') return;
-
-    const textParts = lastMsg.parts
-      .filter((p): p is { type: 'text'; text: string } => p.type === 'text')
-      .map((p) => p.text)
-      .join('\n');
-
-    const hasResumeStructure =
-      textParts.includes('PROFESSIONAL SUMMARY') ||
-      textParts.includes('WORK EXPERIENCE') ||
-      (textParts.includes('SUMMARY') && textParts.includes('EXPERIENCE'));
-
-    if (hasResumeStructure) {
-      parseResumeFromMarkdown(textParts);
-    }
+    const artifact = (lastMsg as UIMessage & { resumeArtifact?: string }).resumeArtifact?.trim();
+    if (artifact) parseResumeFromMarkdown(artifact);
   }, [messages, parseResumeFromMarkdown]);
 
   return (

@@ -1,4 +1,6 @@
 import type { ResumeData, ResumeVersion } from '@/stores/resume-store';
+import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 
 // ─── Helpers ────────────────────────────────────────────────────
 
@@ -15,6 +17,48 @@ function downloadBlob(blob: Blob, filename: string) {
 
 function sanitize(name: string) {
   return name.replace(/[^a-zA-Z0-9_\- ]/g, '').trim().replace(/\s+/g, '_') || 'Resume';
+}
+
+const LETTER_WIDTH_PX = 816;
+const LETTER_HEIGHT_PX = 1056;
+
+async function withExportSurface<T>(source: HTMLElement, render: (surface: HTMLElement) => Promise<T>): Promise<T> {
+  if ('fonts' in document) await document.fonts.ready;
+  const surface = document.createElement('div');
+  surface.setAttribute('aria-hidden', 'true');
+  surface.style.cssText = [
+    'position:fixed',
+    'left:-10000px',
+    'top:0',
+    `width:${LETTER_WIDTH_PX}px`,
+    `min-height:${LETTER_HEIGHT_PX}px`,
+    'overflow:visible',
+    'background:#fff',
+    'z-index:-1',
+  ].join(';');
+  const clone = source.cloneNode(true) as HTMLElement;
+  clone.style.width = `${LETTER_WIDTH_PX}px`;
+  clone.style.minHeight = `${LETTER_HEIGHT_PX}px`;
+  surface.appendChild(clone);
+  document.body.appendChild(surface);
+  try {
+    await new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
+    return await render(surface);
+  } finally {
+    surface.remove();
+  }
+}
+
+function inlineWordTextStyles(source: HTMLElement, clone: HTMLElement) {
+  const sourceElements = [source, ...Array.from(source.querySelectorAll<HTMLElement>('*'))];
+  const cloneElements = [clone, ...Array.from(clone.querySelectorAll<HTMLElement>('*'))];
+  sourceElements.forEach((element, index) => {
+    const target = cloneElements[index];
+    if (!target) return;
+    const computed = window.getComputedStyle(element);
+    target.style.color = computed.color;
+    target.style.fontFamily = computed.fontFamily;
+  });
 }
 
 // ─── Plain Text Export ──────────────────────────────────────────
@@ -84,94 +128,67 @@ export function exportPlainText(resume: ResumeData) {
   downloadBlob(blob, `${sanitize(contact.fullName || 'Resume')}.txt`);
 }
 
-// ─── DOCX Export ────────────────────────────────────────────────
+// ─── PDF / Word exports ────────────────────────────────────────
 
-function escapeXml(s: string) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-function docxParagraph(text: string, opts?: { bold?: boolean; size?: number; heading?: boolean; spacing?: number }) {
-  const sz = (opts?.size || 22) * 2;
-  const bold = opts?.bold ? '<w:b/><w:bCs/>' : '';
-  const spacing = opts?.spacing != null ? `<w:spacing w:after="${opts.spacing}"/>` : '<w:spacing w:after="60"/>';
-  return `<w:p><w:pPr>${spacing}<w:rPr>${bold}<w:sz w:val="${sz}"/><w:szCs w:val="${sz}"/></w:rPr></w:pPr><w:r><w:rPr>${bold}<w:sz w:val="${sz}"/><w:szCs w:val="${sz}"/></w:rPr><w:t xml:space="preserve">${escapeXml(text)}</w:t></w:r></w:p>`;
-}
-
-function docxBullet(text: string) {
-  return `<w:p><w:pPr><w:spacing w:after="40"/><w:ind w:left="360"/><w:rPr><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:pPr><w:r><w:rPr><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr><w:t xml:space="preserve">• ${escapeXml(text)}</w:t></w:r></w:p>`;
-}
-
-function docxHr() {
-  return `<w:p><w:pPr><w:pBdr><w:bottom w:val="single" w:sz="4" w:space="1" w:color="CCCCCC"/></w:pBdr><w:spacing w:after="120"/></w:pPr></w:p>`;
-}
-
-export function exportDocx(resume: ResumeData) {
-  const { contact, summary, experience, education, skills } = resume;
-  const body: string[] = [];
-
-  // Header
-  if (contact.fullName) {
-    body.push(docxParagraph(contact.fullName, { bold: true, size: 16, heading: true, spacing: 40 }));
-  }
-  const contactLine = [contact.email, contact.phone, contact.location].filter(Boolean).join(' | ');
-  if (contactLine) body.push(docxParagraph(contactLine, { size: 9, spacing: 20 }));
-  const linkLine = [contact.linkedin, contact.portfolio].filter(Boolean).join(' | ');
-  if (linkLine) body.push(docxParagraph(linkLine, { size: 9, spacing: 80 }));
-
-  // Summary
-  if (summary) {
-    body.push(docxHr());
-    body.push(docxParagraph('PROFESSIONAL SUMMARY', { bold: true, size: 11, spacing: 60 }));
-    body.push(docxParagraph(summary, { size: 10, spacing: 120 }));
-  }
-
-  // Experience
-  if (experience.length > 0) {
-    body.push(docxHr());
-    body.push(docxParagraph('WORK EXPERIENCE', { bold: true, size: 11, spacing: 60 }));
-    for (const exp of experience) {
-      const title = [exp.title, exp.company, exp.location].filter(Boolean).join(' | ');
-      body.push(docxParagraph(title, { bold: true, size: 10, spacing: 20 }));
-      if (exp.startDate || exp.endDate) {
-        body.push(docxParagraph(`${exp.startDate} – ${exp.endDate}`, { size: 9, spacing: 40 }));
-      }
-      for (const b of exp.bullets) {
-        body.push(docxBullet(b));
-      }
-      body.push(docxParagraph('', { size: 6, spacing: 60 }));
+export async function exportPdf(resume: ResumeData, preview: HTMLElement) {
+  await withExportSurface(preview, async (surface) => {
+    const contentHeight = Math.max(surface.scrollHeight, LETTER_HEIGHT_PX);
+    const canvas = await html2canvas(surface, {
+      backgroundColor: '#ffffff',
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      width: LETTER_WIDTH_PX,
+      height: contentHeight,
+      windowWidth: LETTER_WIDTH_PX,
+      windowHeight: contentHeight,
+    });
+    const pdf = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'letter', compress: true });
+    pdf.setProperties({ title: `${resume.contact.fullName || 'Resume'} — Resume` });
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    const pageHeightPixels = Math.floor(canvas.width * pageHeight / pageWidth);
+    let offset = 0;
+    let page = 0;
+    while (offset < canvas.height) {
+      const sliceHeight = Math.min(pageHeightPixels, canvas.height - offset);
+      const slice = document.createElement('canvas');
+      slice.width = canvas.width;
+      slice.height = sliceHeight;
+      const context = slice.getContext('2d');
+      if (!context) throw new Error('Could not prepare the PDF canvas.');
+      context.fillStyle = '#ffffff';
+      context.fillRect(0, 0, slice.width, slice.height);
+      context.drawImage(canvas, 0, offset, canvas.width, sliceHeight, 0, 0, canvas.width, sliceHeight);
+      if (page > 0) pdf.addPage('letter', 'portrait');
+      pdf.addImage(slice.toDataURL('image/jpeg', 0.96), 'JPEG', 0, 0, pageWidth, sliceHeight * pageWidth / canvas.width, undefined, 'FAST');
+      offset += sliceHeight;
+      page += 1;
     }
-  }
+    pdf.save(`${sanitize(resume.contact.fullName || 'Resume')}.pdf`);
+  });
+}
 
-  // Education
-  if (education.length > 0) {
-    body.push(docxHr());
-    body.push(docxParagraph('EDUCATION', { bold: true, size: 11, spacing: 60 }));
-    for (const edu of education) {
-      body.push(docxParagraph(edu.degree, { bold: true, size: 10, spacing: 20 }));
-      const school = [edu.school, edu.graduationYear].filter(Boolean).join(' | ');
-      if (school) body.push(docxParagraph(school, { size: 9, spacing: 20 }));
-      if (edu.details) body.push(docxParagraph(edu.details, { size: 9, spacing: 60 }));
-    }
-  }
-
-  // Skills
-  if (skills.length > 0) {
-    body.push(docxHr());
-    body.push(docxParagraph('SKILLS', { bold: true, size: 11, spacing: 60 }));
-    body.push(docxParagraph(skills.join(', '), { size: 10 }));
-  }
-
-  // Build the minimal DOCX (single-file flat OPC XML)
-  const docXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<?mso-application progid="Word.Document"?>
-<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml"
-  xmlns:v="urn:schemas-microsoft-com:vml"
-  xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint">
-  <w:body>${body.join('')}</w:body>
-</w:wordDocument>`;
-
-  const blob = new Blob([docXml], { type: 'application/vnd.ms-word' });
-  downloadBlob(blob, `${sanitize(contact.fullName || 'Resume')}.doc`);
+export async function exportWord(resume: ResumeData, preview: HTMLElement) {
+  const body = await withExportSurface(preview, async (surface) => {
+    const source = surface.firstElementChild as HTMLElement;
+    const clone = source.cloneNode(true) as HTMLElement;
+    inlineWordTextStyles(source, clone);
+    return clone.outerHTML;
+  });
+  const documentHtml = `<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta charset="utf-8"><title>${resume.contact.fullName || 'Resume'}</title>
+<style>
+@page ResumePage { size:8.5in 11in; margin:0; mso-page-orientation:portrait; }
+body { margin:0; background:#fff; }
+.resume-word-page { page:ResumePage; width:8.5in; min-height:11in; }
+*, *::before, *::after { box-sizing:border-box; }
+h1,h2,h3,p { margin:0; }
+ul { padding-left:16px; }
+</style></head><body><div class="resume-word-page">${body}</div></body></html>`;
+  const blob = new Blob(['\ufeff', documentHtml], { type: 'application/msword;charset=utf-8' });
+  downloadBlob(blob, `${sanitize(resume.contact.fullName || 'Resume')}.doc`);
 }
 
 // ─── JSON Backup / Restore ──────────────────────────────────────
